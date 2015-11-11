@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+func globalContext() -> NSManagedObjectContext {
+    return (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let feedViewController = FeedViewController()
+        
+        window?.rootViewController = UINavigationController(rootViewController: feedViewController)
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "358AA1B443CF73874C1803D27F73A5500A39C6C7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "358AA1B443CF73874C1803D27F73A5500A39C6C7" : 0,
+    "FC531E4CDD77F1A7FFC2A0C73AB2FDAC4FDA8B9C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "168F27FF-02E6-4BD1-9ECF-F990817546AB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "358AA1B443CF73874C1803D27F73A5500A39C6C7" : "IQ%20test\/",
+    "FC531E4CDD77F1A7FFC2A0C73AB2FDAC4FDA8B9C" : "tweetie\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "IQ test",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IQ test.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/calvin-li\/IQ-Test.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "358AA1B443CF73874C1803D27F73A5500A39C6C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eddiekaiger\/tweetie",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FC531E4CDD77F1A7FFC2A0C73AB2FDAC4FDA8B9C"
+    }
+  ]
+}
