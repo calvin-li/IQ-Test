@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC35D0061C03EC89009029D3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0051C03EC89009029D3 /* CollectionViewController.swift */; };
+		BC35D0091C03EDEE009029D3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */; };
 		BC5B6EE51BF29E75001B78F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */; };
 		BC5B6EE71BF29E75001B78F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EE61BF29E75001B78F6 /* ViewController.swift */; };
 		BC5B6EEA1BF29E76001B78F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5B6EE81BF29E76001B78F6 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC35D0051C03EC89009029D3 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		BC5B6EE11BF29E75001B78F6 /* IQ test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IQ test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC5B6EE61BF29E75001B78F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				BC5B6EF01BF29E76001B78F6 /* LaunchScreen.storyboard */,
 				BC5B6EF31BF29E76001B78F6 /* Info.plist */,
 				BC5B6EEB1BF29E76001B78F6 /* IQ_test.xcdatamodeld */,
+				BC35D0051C03EC89009029D3 /* CollectionViewController.swift */,
+				BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */,
 			);
 			path = "IQ test";
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC35D0061C03EC89009029D3 /* CollectionViewController.swift in Sources */,
 				BC5B6EE71BF29E75001B78F6 /* ViewController.swift in Sources */,
+				BC35D0091C03EDEE009029D3 /* GlobalConstants.swift in Sources */,
 				BC5B6EE51BF29E75001B78F6 /* AppDelegate.swift in Sources */,
 				BC5B6EED1BF29E76001B78F6 /* IQ_test.xcdatamodeld in Sources */,
 			);
@@ -488,6 +496,7 @@
 				BC5B6F0E1BF29E76001B78F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC5B6F0F1BF29E76001B78F6 /* Build configuration list for PBXNativeTarget "IQ testTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +505,7 @@
 				BC5B6F111BF29E76001B78F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC5B6F121BF29E76001B78F6 /* Build configuration list for PBXNativeTarget "IQ testUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +514,7 @@
 				BC5B6F141BF29E76001B78F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
