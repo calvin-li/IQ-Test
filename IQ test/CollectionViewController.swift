@@ -10,11 +10,34 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    private var questionView: UICollectionView!, choicesView: UICollectionView!
+    private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let questionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        questionLayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+        questionLayout.itemSize = CGSize(width: 90, height: 120)
+        
+        let choiceLayout = questionLayout
+        
+        questionView = UICollectionView(frame: self.view.frame, collectionViewLayout: questionLayout)
+        questionView.dataSource = self
+        questionView.delegate = self
+        questionView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.0)
+        questionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: questionReuseIdentifier)
+        self.view.addSubview(questionView)
+        
+        choicesView = UICollectionView(frame: self.view.frame, collectionViewLayout: choiceLayout)
+        choicesView.dataSource = self
+        choicesView.delegate = self
+        choicesView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.0)
+        choicesView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: choiceReuseIdentifier)
+        self.view.addSubview(choicesView)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,6 +45,7 @@ class CollectionViewController: UICollectionViewController {
         //self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,16 +72,28 @@ class CollectionViewController: UICollectionViewController {
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return GlobalConstants.patternSize-1 + GlobalConstants.numberOfChoices
+        if(collectionView == questionView) {
+            return GlobalConstants.patternSize
+        } else if(collectionView == choicesView) {
+            return GlobalConstants.numberOfChoices
+        } else {
+            return 0
+        }
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        
-        let label = cell.contentView.viewWithTag(100) as! UILabel
-        label.text = String(indexPath.item)
-        label.backgroundColor = UIColor.whiteColor()
-    
+        var cell: UICollectionViewCell
+        if(collectionView == choicesView){
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath)
+            cell.backgroundColor = UIColor.orangeColor()
+            
+        } else{
+            cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+            let label = cell.contentView.viewWithTag(100) as! UILabel
+            label.text = String(indexPath.item)
+            label.backgroundColor = UIColor.whiteColor()
+        }
+
         return cell
     }
 

@@ -103,15 +103,15 @@
 		BC5B6EE31BF29E75001B78F6 /* IQ test */ = {
 			isa = PBXGroup;
 			children = (
+				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
 				BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */,
 				BC5B6EE61BF29E75001B78F6 /* ViewController.swift */,
+				BC35D0051C03EC89009029D3 /* CollectionViewController.swift */,
+				BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */,
 				BC5B6EE81BF29E76001B78F6 /* Main.storyboard */,
-				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
 				BC5B6EF01BF29E76001B78F6 /* LaunchScreen.storyboard */,
 				BC5B6EF31BF29E76001B78F6 /* Info.plist */,
 				BC5B6EEB1BF29E76001B78F6 /* IQ_test.xcdatamodeld */,
-				BC35D0051C03EC89009029D3 /* CollectionViewController.swift */,
-				BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */,
 			);
 			path = "IQ test";
 			sourceTree = "<group>";
