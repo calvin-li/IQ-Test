@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVGKit
 
 class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
@@ -78,15 +79,83 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         } else if(collectionView == choicesView) {
             label = UILabel(frame: CGRect(origin: CGPoint(x: 0,y: 0), size: getChoiceCellSize()) )
             cell = collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath)
-            cell.backgroundColor = UIColor.blueColor()
+            cell.backgroundColor = UIColor.whiteColor()
             label.textColor = UIColor.whiteColor()
+            
+            //add button
+            let button = UIButton(type: .System)
+            button.frame = label.frame
+            button.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+            button.addTarget(self, action: "highlight:", forControlEvents: .TouchDown)
+            button.accessibilityIdentifier = String(indexPath.item)
+            
+            cell.contentView.addSubview(button)
+            
         } else {
             return UICollectionViewCell()
         }
         
         label.text = String(indexPath.item)
         cell.contentView.addSubview(label)
+        let newShape = Shape()
+        newShape.setStrokeColor(color: "green")
+        newShape.setFillColor(color: "red")
+        newShape.setOpacity(opacity: 0.5)
+        newShape.setPoints(vertices: [Point(x: 10, y: 10), Point(x: 10, y: 60), Point(x: 60, y: 60)])
+        
+        let shapeImageView = SVGKFastImageView(SVGKImage: newShape.image)
+        cell.contentView.addSubview(shapeImageView)
+        cell.contentView.sendSubviewToBack(shapeImageView)
         
         return cell
     }
+    
+    func pressed(sender: UIButton!){
+        //unhighlight(sender)
+        if sender.accessibilityIdentifier == "0"{
+            print(sender.accessibilityIdentifier)
+        }
+    }
+    
+    func highlight(sender: UIButton!){
+        sender.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.5)
+        dispatch_after( UInt64(10) , dispatch_get_main_queue(), {
+            self.unhighlight(sender)
+        })
+    }
+    
+    func unhighlight(sender: UIButton!){
+        //keep old color, but make it transparent
+        sender.backgroundColor = sender.backgroundColor?.colorWithAlphaComponent(0.0)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
