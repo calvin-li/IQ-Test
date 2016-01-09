@@ -22,6 +22,7 @@
 		BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5B6EF01BF29E76001B78F6 /* LaunchScreen.storyboard */; };
 		BC5B6EFD1BF29E76001B78F6 /* IQ_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EFC1BF29E76001B78F6 /* IQ_testTests.swift */; };
 		BC5B6F081BF29E76001B78F6 /* IQ_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */; };
+		BC8621CD1C3C994100533294 /* Shapes in Resources */ = {isa = PBXBuildFile; fileRef = BC8621CC1C3C994100533294 /* Shapes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		BC5B6F031BF29E76001B78F6 /* IQ testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IQ testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQ_testUITests.swift; sourceTree = "<group>"; };
 		BC5B6F091BF29E76001B78F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC8621CC1C3C994100533294 /* Shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shapes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		BC5B6EE31BF29E75001B78F6 /* IQ test */ = {
 			isa = PBXGroup;
 			children = (
+				BC8621CC1C3C994100533294 /* Shapes */,
 				BC35D0201C0FB031009029D3 /* SVG */,
 				BC35D0221C1658A6009029D3 /* BaseShape.svg */,
 				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
@@ -281,6 +284,7 @@
 				BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */,
 				BC35D0231C1658A6009029D3 /* BaseShape.svg in Resources */,
 				BC5B6EEF1BF29E76001B78F6 /* Assets.xcassets in Resources */,
+				BC8621CD1C3C994100533294 /* Shapes in Resources */,
 				BC5B6EEA1BF29E76001B78F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

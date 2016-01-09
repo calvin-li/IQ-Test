@@ -9,6 +9,8 @@
 import SVGKit
 import Foundation
 
+
+
 class Shape: NSObject {
     private var namespace = "http://www.w3.org/2000/svg"
     
@@ -17,19 +19,18 @@ class Shape: NSObject {
     var strokeColor = "black"
     var fillColor = "white"
     var opacity = 1.0
-    var points: [Point] = []
-    
+    var points: [CGPoint] = []
+
     convenience override init(){
         self.init(shape: "BaseShape.svg")
     }
     
     init(shape: String){
         image = SVGKImage(named: shape)
-        
+
         let tag = "polygon"
         let nodes:NodeList = image.DOMDocument.getElementsByTagName(tag)
         polygon  = nodes.item(0) as! SVGElement
-        //10,10 10,60 60,60 60,10
     }
     
     func setStrokeColor(color color: String) {
@@ -47,30 +48,35 @@ class Shape: NSObject {
         polygon.setAttributeNS(namespace, qualifiedName: "fill-opacity", value: String(opacity))
     }
     
-    func setPoints(vertices vertices: [Point]){
+    func setPoints(vertices vertices: [CGPoint]){
         points = vertices
         var pointString = ""
         for point in points{
             pointString += String(format: "%d,%d ", Int(point.x), Int(point.y))
         }
         polygon.setAttributeNS(namespace, qualifiedName: "points", value: pointString)
+        
+        let layer = image.layerWithIdentifier("baseShape") as! CAShapeLayer
+        
+        let mPath = CGPathCreateMutable()
+        if(points.count >= 2){
+            CGPathAddLines(mPath, nil, points + [points[0], points[1]], points.count+2)
+            //add the last two points to close out the shape and make it look smooth
+        } else {
+            CGPathAddLines(mPath, nil, points, points.count)
+        }
+        
+        layer.path = mPath
     }
-}
-
-class Point: NSObject{
-    var x: Double, y: Double
     
-    init(x: Double, y: Double){
-        self.x = x
-        self.y = y
-    }
+    
 }
 
 class Line: NSObject {
-    var startPoint: Point
-    var endPoint: Point
+    var startPoint: CGPoint
+    var endPoint: CGPoint
     
-    init(startPoint: Point, endPoint: Point){
+    init(startPoint: CGPoint, endPoint: CGPoint){
         self.startPoint = startPoint
         self.endPoint = endPoint
     }

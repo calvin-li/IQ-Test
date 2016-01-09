@@ -101,7 +101,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         newShape.setStrokeColor(color: "green")
         newShape.setFillColor(color: "red")
         newShape.setOpacity(opacity: 0.5)
-        newShape.setPoints(vertices: [Point(x: 10, y: 10), Point(x: 10, y: 60), Point(x: 60, y: 60)])
+        newShape.setPoints(vertices: [CGPointMake(10, 10), CGPointMake(10, 60), CGPointMake(60, 10)])
         
         let shapeImageView = SVGKFastImageView(SVGKImage: newShape.image)
         cell.contentView.addSubview(shapeImageView)
