@@ -16,10 +16,42 @@ class Shape: NSObject {
     
     var image: SVGKImage
     var polygon: SVGElement
-    var strokeColor = "black"
-    var fillColor = "white"
-    var opacity = 1.0
-    var points: [CGPoint] = []
+    var strokeColor = "black" {
+        didSet {
+            polygon.setAttributeNS(namespace, qualifiedName: "stroke", value: strokeColor)
+        }
+    }
+    var fillColor = "white" {
+        didSet{
+            polygon.setAttributeNS(namespace, qualifiedName: "fill", value: fillColor)
+        }
+    }
+    var opacity = 1.0 {
+        didSet {
+            polygon.setAttributeNS(namespace, qualifiedName: "fill-opacity", value: String(opacity))
+        }
+    }
+    var points: [CGPoint] = [] {
+        didSet{
+            var pointString = ""
+            for point in points{
+                pointString += String(format: "%d,%d ", Int(point.x), Int(point.y))
+            }
+            polygon.setAttributeNS(namespace, qualifiedName: "points", value: pointString)
+            
+            let layer = getCurrentLayer()
+            
+            let mPath = CGPathCreateMutable()
+            if(points.count >= 2){
+                CGPathAddLines(mPath, nil, points + [points[0], points[1]], points.count+2)
+                //add the last two points to close out the shape and make it look smooth
+            } else {
+                CGPathAddLines(mPath, nil, points, points.count)
+            }
+            
+            layer.path = mPath
+        }
+    }
 
     convenience override init(){
         self.init(shape: "BaseShape.svg")
@@ -33,43 +65,53 @@ class Shape: NSObject {
         polygon  = nodes.item(0) as! SVGElement
     }
     
-    func setStrokeColor(color color: String) {
-        strokeColor = color
-        polygon.setAttributeNS(namespace, qualifiedName: "stroke", value: strokeColor)
+    func getCurrentLayer() -> CAShapeLayer {
+        return image.layerWithIdentifier("baseShape") as! CAShapeLayer
     }
     
-    func setFillColor(color color: String){
-        fillColor = color
-        polygon.setAttributeNS(namespace, qualifiedName: "fill", value: fillColor)
+    func translate(tX: CGFloat, tY: CGFloat){
+        let matrix = CGAffineTransformMakeTranslation(tX, tY)
+        applyTransform(matrix)
     }
     
-    func setOpacity(opacity alpha: Double){
-        opacity = alpha
-        polygon.setAttributeNS(namespace, qualifiedName: "fill-opacity", value: String(opacity))
+    func scale(factor: CGFloat){
+        let matrix = CGAffineTransformMakeScale(factor, factor)
+        applyTransform(matrix)
     }
     
-    func setPoints(vertices vertices: [CGPoint]){
-        points = vertices
-        var pointString = ""
+    func scale(xFactor: CGFloat, yFactor: CGFloat){
+        let matrix = CGAffineTransformMakeScale(xFactor, yFactor)
+        applyTransform(matrix)
+    }
+    
+    func rotate(radians angle: CGFloat){
+        //find centroid to rotate around
+        var centroid = CGPointMake(0, 0)
         for point in points{
-            pointString += String(format: "%d,%d ", Int(point.x), Int(point.y))
+            centroid.x += point.x
+            centroid.y += point.y
         }
-        polygon.setAttributeNS(namespace, qualifiedName: "points", value: pointString)
+        centroid.x /= CGFloat(points.count)
+        centroid.y /= CGFloat(points.count)
         
-        let layer = image.layerWithIdentifier("baseShape") as! CAShapeLayer
+        //move centroid to origin, rotate, move back
+        var matrix = CGAffineTransformMakeTranslation(-centroid.x, -centroid.y)
+        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeRotation(angle))
+        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(centroid.x, centroid.y))
         
-        let mPath = CGPathCreateMutable()
-        if(points.count >= 2){
-            CGPathAddLines(mPath, nil, points + [points[0], points[1]], points.count+2)
-            //add the last two points to close out the shape and make it look smooth
-        } else {
-            CGPathAddLines(mPath, nil, points, points.count)
-        }
-        
-        layer.path = mPath
+        applyTransform(matrix)
     }
     
+    func rotate(degrees angle: CGFloat){
+        let pi = CGFloat(M_PI)
+        rotate(radians: angle * pi / 180)
+    }
     
+    func applyTransform(var matrix: CGAffineTransform){
+        let layer = getCurrentLayer()
+        let newPath = CGPathCreateCopyByTransformingPath(layer.path, &matrix)
+        layer.path = newPath
+    }
 }
 
 class Line: NSObject {

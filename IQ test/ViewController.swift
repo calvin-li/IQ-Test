@@ -98,10 +98,11 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         label.text = String(indexPath.item)
         cell.contentView.addSubview(label)
         let newShape = Shape()
-        newShape.setStrokeColor(color: "green")
-        newShape.setFillColor(color: "red")
-        newShape.setOpacity(opacity: 0.5)
-        newShape.setPoints(vertices: [CGPointMake(10, 10), CGPointMake(10, 60), CGPointMake(60, 10)])
+        newShape.strokeColor = "green"
+        newShape.fillColor = "red"
+        newShape.opacity = 0.5
+        newShape.points = [CGPointMake(50, 10), CGPointMake(30, 80), CGPointMake(70, 80)]
+        newShape.rotate(degrees: 90)
         
         let shapeImageView = SVGKFastImageView(SVGKImage: newShape.image)
         cell.contentView.addSubview(shapeImageView)
