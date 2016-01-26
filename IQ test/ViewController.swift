@@ -13,9 +13,17 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
+    private var sample = "circle@77@0@0@0@1@red@white@1.0@long@none@3&square&pentagon&NA@none" //TODO: remove
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //clear temp directory
+        let temp = NSTemporaryDirectory()
+        let fM = NSFileManager.defaultManager()
+        for file in try! fM.contentsOfDirectoryAtPath(temp){
+            try! fM.removeItemAtPath(temp + "/" + file)
+        }
         
         let questionLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         questionLayout.itemSize = getQuestionCellSize()
@@ -68,47 +76,36 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell: UICollectionViewCell
-        var label = UILabel()
+        var cell: Cell
+        var cvCell: UICollectionViewCell
+        
         if(collectionView == questionView){
-            label = UILabel(frame: CGRect(origin: CGPoint(x: 0,y: 0), size: getChoiceCellSize()) )
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(questionReuseIdentifier, forIndexPath: indexPath)
-            cell.backgroundColor = UIColor.orangeColor()
-            label.textColor = UIColor.blackColor()
+            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(questionReuseIdentifier, forIndexPath: indexPath))
+            cell.size = getQuestionCellSize()
+            cvCell = cell.cvCell
+            cvCell.backgroundColor = UIColor.yellowColor()
             
         } else if(collectionView == choicesView) {
-            label = UILabel(frame: CGRect(origin: CGPoint(x: 0,y: 0), size: getChoiceCellSize()) )
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath)
-            cell.backgroundColor = UIColor.whiteColor()
-            label.textColor = UIColor.whiteColor()
+            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath))
+            cell.size = getChoiceCellSize()
+            cvCell = cell.cvCell
+            cvCell.backgroundColor = UIColor.whiteColor()
             
             //add button
             let button = UIButton(type: .System)
-            button.frame = label.frame
+            button.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: getChoiceCellSize())
             button.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
             button.addTarget(self, action: "highlight:", forControlEvents: .TouchDown)
             button.accessibilityIdentifier = String(indexPath.item)
             
-            cell.contentView.addSubview(button)
+            cvCell.contentView.addSubview(button)
             
         } else {
             return UICollectionViewCell()
         }
         
-        label.text = String(indexPath.item)
-        cell.contentView.addSubview(label)
-        let newShape = Shape()
-        newShape.strokeColor = "green"
-        newShape.fillColor = "red"
-        newShape.opacity = 0.5
-        newShape.points = [CGPointMake(50, 10), CGPointMake(30, 80), CGPointMake(70, 80)]
-        newShape.rotate(degrees: 90)
-        
-        let shapeImageView = SVGKFastImageView(SVGKImage: newShape.image)
-        cell.contentView.addSubview(shapeImageView)
-        cell.contentView.sendSubviewToBack(shapeImageView)
-        
-        return cell
+        cell.addShape(sample)
+        return cvCell
     }
     
     func pressed(sender: UIButton!){

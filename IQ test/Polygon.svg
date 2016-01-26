@@ -1,0 +1,20 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" 
+	x="0" y="0" width="500" height="500"
+>
+		<polygon 
+			points="0,0 0,50 50,50 50,0"
+			stroke="blue"
+			stroke-width="4"
+			stroke-opacity="1.0"
+			fill="green"
+			fill-opacity="0.99"
+			id="baseShape"
+		/>
+	<!--
+		<pattern 
+			id="diagonalHatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+			<line x1="0" y1="0" x2="0" y2="10" style="stroke:grey; stroke-width:8" 
+		/>
+	-->
+</svg>
+

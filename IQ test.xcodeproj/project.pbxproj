@@ -11,7 +11,6 @@
 		BC35D0061C03EC89009029D3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0051C03EC89009029D3 /* CollectionViewController.swift */; };
 		BC35D0091C03EDEE009029D3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */; };
 		BC35D0211C0FB031009029D3 /* SVG in Resources */ = {isa = PBXBuildFile; fileRef = BC35D0201C0FB031009029D3 /* SVG */; };
-		BC35D0231C1658A6009029D3 /* BaseShape.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC35D0221C1658A6009029D3 /* BaseShape.svg */; };
 		BC35D0251C1661EA009029D3 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0241C1661EA009029D3 /* Shape.swift */; };
 		BC57A0A01C39D93900701275 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC57A09F1C39D93900701275 /* Cell.swift */; };
 		BC5B6EE51BF29E75001B78F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */; };
@@ -23,6 +22,10 @@
 		BC5B6EFD1BF29E76001B78F6 /* IQ_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EFC1BF29E76001B78F6 /* IQ_testTests.swift */; };
 		BC5B6F081BF29E76001B78F6 /* IQ_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */; };
 		BC8621CD1C3C994100533294 /* Shapes in Resources */ = {isa = PBXBuildFile; fileRef = BC8621CC1C3C994100533294 /* Shapes */; };
+		BC9F2EB11C558379007735E4 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB01C558379007735E4 /* Polygon.swift */; };
+		BC9F2EB31C55B68A007735E4 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB21C55B68A007735E4 /* Circle.swift */; };
+		BC9F2EB61C55B758007735E4 /* Circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC9F2EB41C55B758007735E4 /* Circle.svg */; };
+		BC9F2EB71C55B758007735E4 /* Polygon.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC9F2EB51C55B758007735E4 /* Polygon.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		BC35D0051C03EC89009029D3 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		BC35D0201C0FB031009029D3 /* SVG */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SVG; sourceTree = "<group>"; };
-		BC35D0221C1658A6009029D3 /* BaseShape.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseShape.svg; sourceTree = "<group>"; };
 		BC35D0241C1661EA009029D3 /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		BC57A09F1C39D93900701275 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		BC5B6EE11BF29E75001B78F6 /* IQ test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IQ test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,11 @@
 		BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQ_testUITests.swift; sourceTree = "<group>"; };
 		BC5B6F091BF29E76001B78F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC8621CC1C3C994100533294 /* Shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shapes; sourceTree = "<group>"; };
+		BC9F2EAF1C51A0BE007735E4 /* JS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JS; sourceTree = "<group>"; };
+		BC9F2EB01C558379007735E4 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		BC9F2EB21C55B68A007735E4 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		BC9F2EB41C55B758007735E4 /* Circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Circle.svg; sourceTree = "<group>"; };
+		BC9F2EB51C55B758007735E4 /* Polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Polygon.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,20 +144,24 @@
 		BC5B6EE31BF29E75001B78F6 /* IQ test */ = {
 			isa = PBXGroup;
 			children = (
+				BC9F2EAF1C51A0BE007735E4 /* JS */,
 				BC8621CC1C3C994100533294 /* Shapes */,
 				BC35D0201C0FB031009029D3 /* SVG */,
-				BC35D0221C1658A6009029D3 /* BaseShape.svg */,
 				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
+				BC9F2EB41C55B758007735E4 /* Circle.svg */,
+				BC9F2EB51C55B758007735E4 /* Polygon.svg */,
 				BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */,
 				BC5B6EE61BF29E75001B78F6 /* ViewController.swift */,
 				BC35D0051C03EC89009029D3 /* CollectionViewController.swift */,
 				BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */,
 				BC35D0241C1661EA009029D3 /* Shape.swift */,
+				BC9F2EB01C558379007735E4 /* Polygon.swift */,
+				BC57A09F1C39D93900701275 /* Cell.swift */,
+				BC9F2EB21C55B68A007735E4 /* Circle.swift */,
 				BC5B6EE81BF29E76001B78F6 /* Main.storyboard */,
 				BC5B6EF01BF29E76001B78F6 /* LaunchScreen.storyboard */,
 				BC5B6EF31BF29E76001B78F6 /* Info.plist */,
 				BC5B6EEB1BF29E76001B78F6 /* IQ_test.xcdatamodeld */,
-				BC57A09F1C39D93900701275 /* Cell.swift */,
 			);
 			path = "IQ test";
 			sourceTree = "<group>";
@@ -280,12 +291,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9F2EB61C55B758007735E4 /* Circle.svg in Resources */,
 				BC35D0211C0FB031009029D3 /* SVG in Resources */,
 				BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */,
-				BC35D0231C1658A6009029D3 /* BaseShape.svg in Resources */,
 				BC5B6EEF1BF29E76001B78F6 /* Assets.xcassets in Resources */,
 				BC8621CD1C3C994100533294 /* Shapes in Resources */,
 				BC5B6EEA1BF29E76001B78F6 /* Main.storyboard in Resources */,
+				BC9F2EB71C55B758007735E4 /* Polygon.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +370,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9F2EB11C558379007735E4 /* Polygon.swift in Sources */,
 				BC35D0061C03EC89009029D3 /* CollectionViewController.swift in Sources */,
+				BC9F2EB31C55B68A007735E4 /* Circle.swift in Sources */,
 				BC35D0251C1661EA009029D3 /* Shape.swift in Sources */,
 				BC57A0A01C39D93900701275 /* Cell.swift in Sources */,
 				BC5B6EE71BF29E75001B78F6 /* ViewController.swift in Sources */,
