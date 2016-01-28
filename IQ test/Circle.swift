@@ -10,8 +10,6 @@ import SVGKit
 import Foundation
 
 class Circle: Shape {
-    var radius: CGFloat = 1
-    
     init() {
         super.init(baseShape: "circle")
     }

@@ -57,11 +57,23 @@ class Cell: NSObject {
                     newShape.translate(positionX, tY: positionY)
                     newShape.rotate(degrees: orientation)
 
-                    let shapeImageView = SVGKLayeredImageView(SVGKImage: newShape.image)
-                    cvCell.contentView.addSubview(shapeImageView)
+                    let s = newShape.shade(0)
+                    shapes.append(s[0])
                     shapes.append(newShape)
+
                 }
             }
         }
+    }
+    
+    func renderShape(){
+        for shape in shapes{
+            let shapeImageView = SVGKLayeredImageView(SVGKImage: shape.image)
+            cvCell.contentView.addSubview(shapeImageView)
+        }
+    }
+    
+    func shadeShape(angle: Double) -> [Shape]{
+        return []
     }
 }

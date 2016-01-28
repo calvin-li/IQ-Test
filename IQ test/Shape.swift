@@ -16,6 +16,7 @@ class Shape: NSObject {
     var image: SVGKImage
     var svg: SVGElement
     var center: CGPoint = CGPointMake(0, 0)
+    var size: CGFloat = 1
     var strokeColor = "black" {
         didSet {
             svg.setAttributeNS(Shape.namespace, qualifiedName: "stroke", value: strokeColor)
@@ -74,6 +75,7 @@ class Shape: NSObject {
         matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeScale(xFactor, yFactor))
         matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(center.x, center.y))
         applyTransform(matrix)
+        size *= max(xFactor, yFactor)
     }
     
     internal func rotate(radians angle: CGFloat){}
@@ -86,15 +88,31 @@ class Shape: NSObject {
         let newPath = CGPathCreateCopyByTransformingPath(layer.path, &matrix)
         layer.path = newPath
     }
+    
+    func shade(angle: CGFloat) -> [Shape] { return [] }
 }
 
-class Line: NSObject {
-    var startPoint: CGPoint
-    var endPoint: CGPoint
-    
-    init(startPoint: CGPoint, endPoint: CGPoint){
-        self.startPoint = startPoint
-        self.endPoint = endPoint
-    }
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

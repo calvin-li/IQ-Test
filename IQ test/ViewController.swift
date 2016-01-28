@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
-    private var sample = "circle@77@0@0@0@1@red@white@1.0@long@none@3&square&pentagon&NA@none" //TODO: remove
+    private var sample = "square@77@0@0@0@1@red@white@1.0@long@none@3@none" //TODO: remove
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +105,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         }
         
         cell.addShape(sample)
+        cell.renderShape() //InternalInconsistency exception if we don't render Shape here
         return cvCell
     }
     

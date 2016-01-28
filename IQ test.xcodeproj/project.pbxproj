@@ -26,6 +26,7 @@
 		BC9F2EB31C55B68A007735E4 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB21C55B68A007735E4 /* Circle.swift */; };
 		BC9F2EB61C55B758007735E4 /* Circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC9F2EB41C55B758007735E4 /* Circle.svg */; };
 		BC9F2EB71C55B758007735E4 /* Polygon.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC9F2EB51C55B758007735E4 /* Polygon.svg */; };
+		BC9F2EB91C59B563007735E4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB81C59B563007735E4 /* Line.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BC9F2EB21C55B68A007735E4 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		BC9F2EB41C55B758007735E4 /* Circle.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Circle.svg; sourceTree = "<group>"; };
 		BC9F2EB51C55B758007735E4 /* Polygon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Polygon.svg; sourceTree = "<group>"; };
+		BC9F2EB81C59B563007735E4 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				BC35D0051C03EC89009029D3 /* CollectionViewController.swift */,
 				BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */,
 				BC35D0241C1661EA009029D3 /* Shape.swift */,
+				BC9F2EB81C59B563007735E4 /* Line.swift */,
 				BC9F2EB01C558379007735E4 /* Polygon.swift */,
 				BC57A09F1C39D93900701275 /* Cell.swift */,
 				BC9F2EB21C55B68A007735E4 /* Circle.swift */,
@@ -379,6 +382,7 @@
 				BC35D0091C03EDEE009029D3 /* GlobalConstants.swift in Sources */,
 				BC5B6EE51BF29E75001B78F6 /* AppDelegate.swift in Sources */,
 				BC5B6EED1BF29E76001B78F6 /* IQ_test.xcdatamodeld in Sources */,
+				BC9F2EB91C59B563007735E4 /* Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

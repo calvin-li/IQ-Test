@@ -51,6 +51,8 @@ class Polygon: Shape {
         var offset = -M_PI_2
         
         switch shape{
+        case "line":
+            numberOfVertices = 2
         case "triangle":
             numberOfVertices = 3
         case "square":
@@ -84,9 +86,11 @@ class Polygon: Shape {
     }
     
     override func applyTransform(matrix: CGAffineTransform) {
+        let oldCenter = center
         for i in 0..<points.count {
             points[i] = CGPointApplyAffineTransform(points[i], matrix)
         }
+        center = oldCenter //setting points[i] sets center too
         super.applyTransform(matrix)
     }
     
@@ -94,4 +98,59 @@ class Polygon: Shape {
         let pi = CGFloat(M_PI)
         rotate(radians: angle * pi / 180)
     }
+    
+    override func shade(angle: CGFloat) -> [Shape] {
+        let numLines = 10
+        let startX = center.x - size
+        var ans: [Shape] = []
+        for i in 0..<numLines{
+            let newLine = Polygon()
+            let nextX = startX + CGFloat(i)/10*size
+            var iPoints: [CGPoint] = [] //intersection Points
+            
+            newLine.strokeColor = "grey"
+            newLine.opacity = 0.75
+            newLine.generateShape("line")
+            newLine.translate(nextX, tY: center.y)
+            newLine.scale(size)
+            newLine.center = center
+            newLine.rotate(degrees: angle)
+            
+            for j in 0..<points.count{
+                let iLine = Line(startPoint: points[j], endPoint: points[(j+1) % points.count])
+                if let iPoint = iLine.intersect(newLine){
+                    //the line segments intersect
+                    if !(iPoints.count == 1 && iPoint == iPoints[0]){
+                        iPoints = iPoints + [iPoint]
+                    }
+                }
+            }
+            if (iPoints.count == 2){
+                newLine.points = iPoints
+                ans.append(newLine)
+            }
+        }
+        return ans
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
