@@ -2,8 +2,8 @@
 	x="0" y="0" width="500" height="500"
 >
 		<circle 
-			cx="0"
-			cy="0"
+			cx="-2"
+			cy="-2"
 			r="1"
 			stroke="blue"
 			stroke-width="4"

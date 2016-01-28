@@ -17,6 +17,11 @@ class Shape: NSObject {
     var svg: SVGElement
     var center: CGPoint = CGPointMake(0, 0)
     var size: CGFloat = 1
+    var strokeWidth = 4 {
+        didSet {
+            svg.setAttributeNS(Shape.namespace, qualifiedName: "stroke-width", value: String(strokeWidth))
+        }
+    }
     var strokeColor = "black" {
         didSet {
             svg.setAttributeNS(Shape.namespace, qualifiedName: "stroke", value: strokeColor)
@@ -50,8 +55,7 @@ class Shape: NSObject {
         svg  = nodes.item(0) as! SVGElement
     }
     
-    internal func generateShape(shape: String){
-    }
+    internal func generateShape(shape: String){}
     
     func getCurrentLayer() -> CAShapeLayer {
         return image.layerWithIdentifier("baseShape") as! CAShapeLayer
@@ -89,7 +93,35 @@ class Shape: NSObject {
         layer.path = newPath
     }
     
-    func shade(angle: CGFloat) -> [Shape] { return [] }
+    func shade(angle: CGFloat) -> [Shape] {
+        let numLines = 10
+        let startX = center.x - size
+        var ans: [Shape] = []
+        for i in 0..<numLines{
+            let newLine = Polygon()
+            let nextX = startX + CGFloat(i)/10 * size*2
+            
+            newLine.strokeColor = "grey"
+            newLine.opacity = 0.5
+            newLine.strokeWidth = strokeWidth/2
+            newLine.generateShape("line")
+            newLine.translate(nextX, tY: center.y)
+            newLine.scale(size)
+            newLine.center = center
+            newLine.rotate(degrees: angle)
+            
+            let iPoints = intersect(newLine)
+
+            if (iPoints.count == 2){
+                newLine.points = iPoints
+                newLine.reDraw()
+                ans.append(newLine)
+            }
+        }
+        return ans
+    }
+    
+    func intersect(line: Polygon) -> [CGPoint]{ return [] }
 }
 
 

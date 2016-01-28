@@ -51,14 +51,13 @@ class Cell: NSObject {
                     newShape.fillColor = fillColor
                     newShape.opacity = 1 - Double(opacity)!
                     newShape.generateShape(layer)
+                    
                     //make sure to set stroke, fillColor, etc BEFORE points
                     newShape.scale(scale)
                     newShape.translate(center)
                     newShape.translate(positionX, tY: positionY)
                     newShape.rotate(degrees: orientation)
 
-                    let s = newShape.shade(0)
-                    shapes.append(s[0])
                     shapes.append(newShape)
 
                 }

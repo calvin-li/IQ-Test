@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
-    private var sample = "square@77@0@0@0@1@red@white@1.0@long@none@3@none" //TODO: remove
+    private var sample = "circle@77@0@0@0@1@red@white@1.0@long@none@3&pentagon&square&NA@none" //TODO: remove
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,12 +84,16 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
             cell.size = getQuestionCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.yellowColor()
+            cell.addShape(sample)
+            cell.renderShape()
             
         } else if(collectionView == choicesView) {
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath))
             cell.size = getChoiceCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.whiteColor()
+            cell.addShape(sample)
+            cell.renderShape()
             
             //add button
             let button = UIButton(type: .System)
@@ -103,14 +107,12 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         } else {
             return UICollectionViewCell()
         }
-        
-        cell.addShape(sample)
-        cell.renderShape() //InternalInconsistency exception if we don't render Shape here
+    
         return cvCell
     }
     
     func pressed(sender: UIButton!){
-        //unhighlight(sender)
+        unhighlight(sender)
         if sender.accessibilityIdentifier == "0"{
             print(sender.accessibilityIdentifier)
         }
@@ -118,9 +120,6 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     
     func highlight(sender: UIButton!){
         sender.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.5)
-        dispatch_after( UInt64(10) , dispatch_get_main_queue(), {
-            self.unhighlight(sender)
-        })
     }
     
     func unhighlight(sender: UIButton!){
