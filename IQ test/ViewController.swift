@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
-    private var sample = "circle@77@0@0@0@1@red@white@1.0@long@none@3&pentagon&square&NA@none" //TODO: remove
+    private var sample = "ellipse@   77@ 0@  0@  0@  1@  red@    white@  1.0@    long@   none@   none@   none" //TODO: remove
     
     override func viewDidLoad() {
         super.viewDidLoad()

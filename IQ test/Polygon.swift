@@ -57,6 +57,8 @@ class Polygon: Shape {
         case "square":
             numberOfVertices = 4
             offset = M_PI_4
+        case "trapezoid":
+            numberOfVertices = 4
         case "pentagon":
             numberOfVertices = 5
         case "haxgon": //typo of hexagon
@@ -65,12 +67,22 @@ class Polygon: Shape {
         default:
             fatalError("Shape not recognized")
         }
-        for i in 1...numberOfVertices{
-            let angle = 2 * CGFloat(i) * CGFloat(M_PI) / CGFloat(numberOfVertices) + CGFloat(offset)
-            let newX = cos(angle) * 1
-            let newY = sin(angle) * 1
-            let newPoint = CGPointMake(newX, newY)
-            newPoints.append(newPoint)
+        
+        if(shape == "trapezoid"){
+            newPoints = [
+                CGPointMake(-0.5, -0.5),
+                CGPointMake(-1, 0.5),
+                CGPointMake(1, 0.5),
+                CGPointMake(0.5, -0.5)
+            ]
+        } else {
+            for i in 1...numberOfVertices{
+                let angle = 2 * CGFloat(i) * CGFloat(M_PI) / CGFloat(numberOfVertices) + CGFloat(offset)
+                let newX = cos(angle) * 1
+                let newY = sin(angle) * 1
+                let newPoint = CGPointMake(newX, newY)
+                newPoints.append(newPoint)
+            }
         }
         points = newPoints
         reDraw()
