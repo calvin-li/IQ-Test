@@ -18,10 +18,9 @@ class Cell: NSObject {
     }
     
     func addShape(parameterString: String){
-        //pentagon@ 77@ 0@  0@  0@  1@  red@    white@  1.0@    long@   none@3  &square&circle&NA@  none //TODO: remove
-        //ellipse@  38@ 0@  0@  0@  1@  red@    white@  1.0@    none@   ver@    none@   none@   dense@  none!
         let noWSParameters = parameterString.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let parameters = noWSParameters.joinWithSeparator("").componentsSeparatedByString("@")
+        
         let shape = parameters[0]
         var scale = CGFloat(Double(parameters[1])!)
         let orientation = CGFloat(Double(parameters[2])!)
@@ -47,6 +46,8 @@ class Cell: NSObject {
                         newShape = Circle()
                     }else if(layer == "ellipse"){
                         newShape = Ellipse()
+                    } else if(layer == "curve"){
+                        newShape = Shape(baseShape: "curve")
                     } else{
                         newShape = Polygon()
                     }
@@ -62,7 +63,7 @@ class Cell: NSObject {
                     newShape.translate(positionX, tY: positionY)
                     newShape.rotate(degrees: orientation)
 
-                    shapes += newShape.shade(0)
+                    shapes += newShape.shade(45)
                     
                     shapes.append(newShape)
 

@@ -43,7 +43,7 @@ class Circle: Shape {
 }
 
 class Ellipse: Circle {
-    var angle:Double = 0
+    var shadeAngle:Double = 0
     
     override func generateShape(shape: String) {
         super.generateShape(shape)
@@ -51,13 +51,8 @@ class Ellipse: Circle {
     }
     
     override func shade(angle: CGFloat) -> [Shape] {
-        
-        self.angle = Double(angle)
-        let lines = super.shade(0)
-        for line in lines{
-            line.translate(center)
-        }
-        
+        shadeAngle = Double(angle) * M_PI / 180
+        let lines = super.shade(angle)
         return lines
     }
     
@@ -65,14 +60,15 @@ class Ellipse: Circle {
         var iPoints: [CGPoint] = []
         let x = Double(verticalLine.points[0].x - center.x)
         let rx = sq(Double(size)), ry = rx/4
-        let a = ry * sq(sin(angle)) + rx * sq(cos(angle))
-        let b = 2 * x * cos(angle) * sin(angle) * (rx - ry)
-        let c = sq(x) * (ry * sq(cos(angle)) + rx * sq(sin(angle))) - rx * ry
+        let sinA = sin(shadeAngle), cosA = cos(shadeAngle)
+        let a = ry * sq(sinA) + rx * sq(cosA)
+        let b = 2 * x * cosA * sinA * (rx - ry)
+        let c = sq(x) * (ry * sq(cosA) + rx * sq(sinA)) - rx * ry
         
         if let iYs = qsolve(a, b: b, c: c){
             iPoints = [
-                CGPoint(x: x, y: iYs.0),
-                CGPoint(x: x, y: iYs.1)
+                center + CGPoint(x: x, y: iYs.0),
+                center + CGPoint(x: x, y: iYs.1)
             ]
         }
         

@@ -25,8 +25,8 @@ class Line: NSObject {
         let q = otherLine.points[0]
         let r = endPoint - startPoint
         let s = otherLine.points[1] - q
-        let t = (q - p) * s / (r * s)
-        let u = (p - q) * r / (s * r)
+        let t = roundDecimal((q - p) * s / (r * s))
+        let u = roundDecimal((p - q) * r / (s * r))
         
         if(r * s != 0 &&
             0 <= t && t <= 1 &&
@@ -56,6 +56,50 @@ func -(left: CGPoint, right: CGPoint) -> CGPoint{
     return left + -right
 }
 
+func *(left: CGPoint, right: CGFloat) -> CGPoint{
+    return CGPointMake(left.x * right, left.y * right)
+}
+
+func ==(left: CGPoint, right: CGPoint) -> Bool{
+    return roundDecimal(left.x) == roundDecimal(right.x) &&
+        roundDecimal(left.y) == roundDecimal(right.y)
+}
+
+func roundDecimal(x: CGFloat) -> CGFloat{
+    let p = CGFloat(pow(10.0, 3.0))
+    return round(x*p)/p
+}
+
 prefix func -(right: CGPoint) -> CGPoint{
     return CGPointMake(-right.x, -right.y)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
