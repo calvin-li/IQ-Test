@@ -1,0 +1,13 @@
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" 
+	x="0" y="0" width="500" height="500"
+>
+		<path 
+			d="M 0 6 Q 8 0 16 6"
+			stroke="blue"
+			stroke-width="4"
+			stroke-opacity="1.0"
+			fill="green"
+			fill-opacity="0.0"
+			id="baseShape"
+		/>
+</svg>

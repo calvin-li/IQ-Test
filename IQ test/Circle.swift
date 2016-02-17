@@ -16,7 +16,7 @@ class Circle: Shape {
     
     override func generateShape(shape: String) {
         translate(-2.9, tY: -2.8) //make anchor point at origin
-        center = CGPointMake(0, 0)
+        center = CGPointZero
     }
     
     override func shade(angle: CGFloat) -> [Shape] {
@@ -90,6 +90,17 @@ class Ellipse: Circle {
     }
 }
 
+class Curve: Shape {
+    init(){
+        super.init(baseShape: "path")
+    }
+    
+    override func generateShape(shape: String) {
+        translate(-10, tY: -7)
+        center = CGPointZero //adjust anchor to origin
+        scale(1.0/10)
+    }
+}
 
 
 

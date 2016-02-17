@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		384CC1B3C1FCC9AF78EAF488 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C75A95FD876ABA0416D35CF /* Pods.framework */; };
+		BC2A0AD31C73F8640015189E /* Path.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A0AD21C73F8640015189E /* Path.svg */; };
 		BC35D0061C03EC89009029D3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0051C03EC89009029D3 /* CollectionViewController.swift */; };
 		BC35D0091C03EDEE009029D3 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */; };
 		BC35D0211C0FB031009029D3 /* SVG in Resources */ = {isa = PBXBuildFile; fileRef = BC35D0201C0FB031009029D3 /* SVG */; };
@@ -50,6 +51,7 @@
 		2C75A95FD876ABA0416D35CF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		490F5455F5ADBB2226F80611 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		76B3594D2047B44EB33150CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BC2A0AD21C73F8640015189E /* Path.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Path.svg; sourceTree = "<group>"; };
 		BC35D0051C03EC89009029D3 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BC35D0081C03EDEE009029D3 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		BC35D0201C0FB031009029D3 /* SVG */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SVG; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				BC8621CC1C3C994100533294 /* Shapes */,
 				BC35D0201C0FB031009029D3 /* SVG */,
 				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
+				BC2A0AD21C73F8640015189E /* Path.svg */,
 				BC9F2EB41C55B758007735E4 /* Circle.svg */,
 				BC9F2EB51C55B758007735E4 /* Polygon.svg */,
 				BC5B6EE41BF29E75001B78F6 /* AppDelegate.swift */,
@@ -298,6 +301,7 @@
 				BC35D0211C0FB031009029D3 /* SVG in Resources */,
 				BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */,
 				BC5B6EEF1BF29E76001B78F6 /* Assets.xcassets in Resources */,
+				BC2A0AD31C73F8640015189E /* Path.svg in Resources */,
 				BC8621CD1C3C994100533294 /* Shapes in Resources */,
 				BC5B6EEA1BF29E76001B78F6 /* Main.storyboard in Resources */,
 				BC9F2EB71C55B758007735E4 /* Polygon.svg in Resources */,

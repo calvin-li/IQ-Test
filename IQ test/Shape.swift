@@ -38,7 +38,6 @@ class Shape: NSObject {
         }
     }
 
-
     init(baseShape: String){
         Shape.count += 1
         

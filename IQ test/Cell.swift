@@ -47,7 +47,7 @@ class Cell: NSObject {
                     }else if(layer == "ellipse"){
                         newShape = Ellipse()
                     } else if(layer == "curve"){
-                        newShape = Shape(baseShape: "curve")
+                        newShape = Curve()
                     } else{
                         newShape = Polygon()
                     }
