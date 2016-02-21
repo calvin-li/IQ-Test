@@ -1,0 +1,628 @@
+triangle@	120@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	120@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+haxgon@	66@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+rectangle@	68@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+rectangle@	85@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none$
+
+
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	dense@	none!
+circle@	128@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none!
+trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	sparse@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none!
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none!
+pentagon@	75@	0@	0@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+haxgon@	66@	0@	0@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	haxgon@	66@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none!
+pentagon@	75@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	normal@	none!
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	normal@	none
+~
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	dense@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	normal@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	normal@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	normal@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	dense@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	dense@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	sparse@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	sparse@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	normal@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	normal@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	dense@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	sparse@	none$
+
+
+line@	68@	90@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	90@	-40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	135@	40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	45@	40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	135@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	135@	-40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	90@	40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+arrow@	9@	0@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lhaxgon@	9.5@	45@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	180@	-40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none
+~
+lsquare@	15.5@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	180@	40@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	180@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	180@	40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	180@	40@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	180@	40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none$
+
+
+sql@	8@	0@	0@	30@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	-30@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	180@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	30@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	-30@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	180@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	180@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	90@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	180@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	90@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	30@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+line@	68@	0@	30@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+darrow@	9@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+arrow@	9@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	-30@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none$
+
+
+arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	-97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	97@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lpentagon@	11@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	0@	0@	20@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	-97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lpentagon@	11@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	20@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	97@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lpentagon@	11@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	0@	0@	97@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	ltriangle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lhaxgon@	9.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none$
+
+
+darrow@	9@	180@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	120@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	60@	40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	120@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	sql@	8@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	180@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	60@	-40@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	sql@	8@	120@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	60@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	120@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	180@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	180@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	60@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	180@	40@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	120@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	60@	-40@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	120@	40@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	sql@	8@	180@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+line@	68@	120@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	120@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	120@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	60@	-40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	120@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	40@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+lhaxgon@	9.5@	0@	0@	0@	4@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	4@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	0@	4@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	2@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	0@	0@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+curve@	70@	0@	0@	0@	2@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	2@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	2@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	4@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	3@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+lsquare@	22@	30@	85@	30@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	150@	-85@	30@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	80@	-45@	-22@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+dot@	normal@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	80@	45@	22@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	80@	-50@	-51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+dot@	normal@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+lsquare@	22@	0@	-75@	51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	50@	71@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	70@	51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	80@	50@	51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	90@	51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	50@	-51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	50@	31@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	22@	0@	-55@	51@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+rectangle@	68@	0@	0@	0@	3@	lime@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	90@	0@	0@	3@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	darrow@	9@	180@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	0@	0@	30@	4@	magenta@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-30@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	2@	lime@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	180@	0@	0@	4@	magenta@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	90@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	3@	magenta@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	180@	0@	0@	2@	lime@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	curve@	70@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	4@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	0@	3@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	0@	2@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	4@	cyan@	white@	1.0@	short@	none@	none@	none@	none@	none$
+
+
+sql@	8@	0@	0@	97@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lhaxgon@	9.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	0@	0@	97@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	15.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	97@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+lsquare@	15.5@	0@	0@	97@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	15.5@	0@	0@	97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	darrow@	9@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	0@	0@	-97@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	97@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	0@	0@	20@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none$
+
+
+darrow@	9@	90@	-105@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	90@	-13@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	105@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	90@	-105@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lhaxgon@	9.5@	90@	-13@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	90@	-13@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lpentagon@	11@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	90@	-105@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	90@	-13@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lpentagon@	11@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	90@	105@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-13@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	90@	-13@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	90@	105@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lhaxgon@	9.5@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	-105@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	90@	-13@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lpentagon@	11@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	90@	105@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	90@	-105@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	lhaxgon@	9.5@	90@	-13@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+line@	68@	90@	-13@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	90@	-13@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	-105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	-13@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	90@	105@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+sql@	8@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	normal!
+darrow@	9@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	normal!
+curve@	70@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	normal!
+sql@	8@	0@	0@	0@	3@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	normal!
+lsquare@	15.5@	0@	0@	0@	3@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	triangle@	120@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	normal!
+sql@	8@	0@	0@	0@	3@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	normal!
+curve@	70@	0@	0@	0@	2@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	blur!
+lhaxgon@	9.5@	0@	0@	0@	2@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	blur
+~
+lsquare@	15.5@	0@	0@	0@	2@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	blur!
+lsquare@	15.5@	0@	0@	0@	3@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	blur!
+lsquare@	15.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	blur!
+lsquare@	15.5@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	blur!
+trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	blur#
+	lsquare@	15.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	blur#
+	lsquare@	15.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	lsquare@	15.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+trapzoid@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	normal#
+	lsquare@	15.5@	0@	0@	0@	2@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+line@	68@	0@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	135@	0@	40@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lhaxgon@	9.5@	180@	0@	40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	sql@	8@	0@	0@	-40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+lpentagon@	11@	135@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	darrow@	9@	90@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	45@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+sql@	8@	135@	0@	40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	180@	0@	-40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	45@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	45@	0@	40@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	45@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	curve@	70@	90@	0@	40@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+line@	68@	90@	0@	40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	line@	68@	90@	0@	-40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none
+~
+wave@	9@	180@	0@	-40@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	180@	0@	-40@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	180@	0@	-40@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	180@	0@	-40@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	wave@	9@	180@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	wave@	9@	180@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+wave@	9@	180@	0@	-40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+wave@	9@	180@	0@	-40@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	arrow@	9@	180@	0@	40@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none$
+
+
+arrow@	9@	30@	28@	59@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+dot@	normal@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	30@	-28@	-59@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	120@	42@	19@	4@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	60@	-42@	19@	4@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	30@	54@	72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+dot@	normal@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+lcircle@	24@	0@	-54@	-32@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	-54@	72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	55@	-72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	-74@	-72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	30@	-54@	-72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	-34@	-72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	75@	-72@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	24@	0@	-54@	-52@	2@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+square@	112@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+strcros@	normal@	-1@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+square@	90@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	120@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+hightriangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	120@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+revellipse@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+hightriangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	160@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	95@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+fattriangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+curve@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+circle@	160@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+ltriangle@	17.5@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+darrow@	9@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	15.5@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+arrow@	9@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+star@	70@	0@	0@	0@	1@	lime@	white@	1.0@	none@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	blue@	white@	1.0@	mid@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	blue@	white@	1.0@	short@	none@	none@	none@	none@	none!
+star@	70@	0@	0@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+darrow@	9@	135@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	sparse@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	ellipse@	38@	0@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+arrow@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	trapzoid@	70@	45@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	normal@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	rectangle@	68@	180@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	triangle@	120@	45@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	sparse@	none!
+sql@	8@	135@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	rectangle@	68@	180@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+line@	68@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	circle@	128@	0@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	dense@	none
+~
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	mid@	none@	none@	none@	none@	none#
+	circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none#
+	circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+wave@	9@	0@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	sparse@	none!
+circle@	128@	45@	0@	0@	1@	lime@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none#
+	circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	pos@	none@	none@	dense@	none!
+circle@	128@	45@	0@	0@	1@	cyan@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	none@	none@	none@	normal@	none#
+	wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none!
+circle@	128@	45@	0@	0@	1@	blue@	white@	1.0@	none@	neg@	none@	none@	sparse@	none#
+	wave@	9@	135@	0@	0@	1@	red@	white@	1.0@	short@	none@	none@	none@	none@	none$
+
+
+circle@	128@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+strcros@	normal@	-1@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+circle@	100@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+circle@	128@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+ellipse@	38@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	120@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none
+~
+hightriangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	160@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rectangle@	68@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+square@	140@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+triangle@	95@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+fattriangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+rerectangle@	normal@	0@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none!
+sql@	8@	90@	0@	0@	1@	red@	white@	1.0@	none@	none@	none@	none@	none@	none$
+
+
+lhaxgon@	9.5@	0@	0@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	normal@	none#
+	pentagon@	75@	0@	0@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	dense@	none!
+lhaxgon@	9.5@	0@	0@	0@	1@	magenta@	white@	1.0@	none@	neg@	none@	none@	sparse@	none#
+	circle@	128@	0@	0@	0@	1@	red@	white@	1.0@	short@	ver@	none@	none@	sparse@	none!
+lhaxgon@	9.5@	0@	0@	0@	1@	red@	white@	1.0@	none@	neg@	none@	none@	dense@	none#
+	pentagon@	75@	0@	0@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	normal@	none!
+haxgon@	66@	0@	-30@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	dense@	none#
+	triangle@	120@	0@	30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	sparse@	none!
+haxgon@	66@	0@	-30@	0@	1@	magenta@	white@	1.0@	none@	neg@	none@	none@	normal@	none#
+	circle@	128@	0@	30@	0@	1@	red@	white@	1.0@	short@	ver@	none@	none@	normal@	none!
+haxgon@	66@	0@	-30@	0@	1@	red@	white@	1.0@	none@	pos@	none@	none@	sparse@	none#
+	ellipse@	38@	0@	30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	normal@	none!
+trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none#
+	haxgon@	66@	0@	-30@	0@	1@	red@	white@	1.0@	short@	ver@	none@	none@	normal@	none!
+trapzoid@	70@	0@	30@	0@	1@	magenta@	white@	1.0@	none@	neg@	none@	none@	dense@	none#
+	haxgon@	66@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	sparse@	none
+~
+trapzoid@	70@	0@	30@	0@	1@	blue@	white@	1.0@	none@	hor@	none@	none@	sparse@	none#
+	circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	normal@	none!
+ellipse@	38@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none#
+	circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	dense@	none!
+circle@	128@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none#
+	circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	sparse@	none!
+circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	short@	ver@	none@	none@	dense@	none#
+	trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	normal@	none!
+circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	none@	ver@	none@	none@	dense@	none#
+	trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	sparse@	none!
+trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none#
+	circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	ver@	none@	none@	normal@	none!
+circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	neg@	none@	none@	normal@	none#
+	trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	normal@	none!
+circle@	128@	0@	-30@	0@	1@	red@	white@	1.0@	mid@	pos@	none@	none@	sparse@	none#
+	trapzoid@	70@	0@	30@	0@	1@	red@	white@	1.0@	none@	hor@	none@	none@	dense@	none$
+
+
+lpentagon@	11@	0@	0@	0@	1@	blue@	rgb(134, 87, 179)@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	1@	red@	rgb(134, 87, 179)@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	0@	1@	magenta@	rgb(134, 87, 179)@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	0@	1@	magenta@	rgb(140, 154, 168)@	1.0@	none@	none@	none@	none@	none@	none!
+lcircle@	17.5@	0@	0@	0@	1@	blue@	rgb(140, 154, 168)@	1.0@	none@	none@	none@	none@	none@	none!
+lpentagon@	11@	0@	0@	0@	1@	red@	rgb(140, 154, 168)@	1.0@	none@	none@	none@	none@	none@	none!
+lsquare@	15.5@	0@	0@	0@	1@	blue@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+lhaxgon@	9.5@	0@	0@	0@	1@	magenta@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none
+~
+ltriangle@	17.5@	0@	0@	0@	1@	lime@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	red@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	cyan@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	magenta@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	blue@	cornflowerblue@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	red@	none@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	red@	rgb(134, 87, 179)@	1.0@	none@	none@	none@	none@	none@	none!
+ltriangle@	17.5@	0@	0@	0@	1@	red@	rgb(140, 154, 168)@	1.0@	none@	none@	none@	none@	none@	none^^CBACADEDAGECHEFCEAFB
