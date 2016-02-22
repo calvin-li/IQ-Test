@@ -58,10 +58,12 @@ class Cell: NSObject {
                     newShape.generateShape(layer)
                     
                     //make sure to set stroke, fillColor, etc BEFORE points
+                    scale = newShape.findSideLength(scale)
                     newShape.scale(scale)
                     newShape.translate(center)
                     newShape.translate(positionX, tY: positionY)
                     newShape.rotate(degrees: orientation)
+                    newShape = adjust(newShape)
 
                     shapes += newShape.shade(45)
                     
@@ -70,6 +72,21 @@ class Cell: NSObject {
                 }
             }
         }
+    }
+    
+    func adjust(newShape: Shape) -> Shape{
+        if let poly = newShape as? Polygon{
+            var maxY:CGFloat = poly.center.y
+            var minY:CGFloat = poly.center.y
+            var delta:CGFloat
+            for point in poly.points{
+                maxY = max(maxY, point.y)
+                minY = min(minY, point.y)
+            }
+            delta = (maxY+minY)/2 - poly.center.y
+            newShape.translate(0, tY: -delta)
+        }
+        return newShape
     }
     
     func renderShape(){

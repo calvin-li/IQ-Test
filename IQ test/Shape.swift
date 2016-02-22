@@ -121,6 +121,10 @@ class Shape: NSObject {
     }
     
     func intersect(line: Polygon) -> [CGPoint]{ return [] }
+    
+    func findSideLength(scale: CGFloat) -> CGFloat{
+        return scale
+    }
 }
 
 

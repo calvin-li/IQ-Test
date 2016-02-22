@@ -48,16 +48,18 @@ class Polygon: Shape {
     
     override func generateShape(shape: String) {
         var newPoints: [CGPoint] = []
-        var waveScale = CGFloat(1.0/10)
+        var waveScale = CGFloat(4.0/5)
         
         switch shape{
-        case "trapezoid":
+        case "trapzoid": //typo of trapezoid
             newPoints = [
                 CGPointMake(-0.5, -0.5),
                 CGPointMake(-1, 0.5),
                 CGPointMake(1, 0.5),
                 CGPointMake(0.5, -0.5)
             ]
+            waveScale = 0.8
+            closed = true
         case "sql":
             newPoints = [
                 CGPointMake(-8, 1),
@@ -73,15 +75,15 @@ class Polygon: Shape {
             ]
         case "wave":
             newPoints = [
-                CGPointMake(-8, 1),
-                CGPointMake(-6, -1),
-                CGPointMake(-4, 1),
-                CGPointMake(-2, -1),
-                CGPointMake(0, 1),
-                CGPointMake(2, -1),
-                CGPointMake(4, 1),
-                CGPointMake(6, -1),
-                CGPointMake(8, 1),
+                CGPointMake(-8, -1),
+                CGPointMake(-6, 1),
+                CGPointMake(-4, -1),
+                CGPointMake(-2, 1),
+                CGPointMake(0, -1),
+                CGPointMake(2, 1),
+                CGPointMake(4, -1),
+                CGPointMake(6, 1),
+                CGPointMake(8, -1),
             ]
         case "arrow":
             newPoints = [
@@ -93,13 +95,16 @@ class Polygon: Shape {
                 CGPointMake(3, 0),
             ]
         default:
-            waveScale = 1
             newPoints = generateRegularNgon(shape)
+            waveScale = 1.0
         }
         
         points = newPoints
         reDraw()
         scale(waveScale)
+        if(shape == "rectangle"){
+            scale(1, yFactor: 0.667)
+        }
     }
     
     func generateRegularNgon(shape: String) -> [CGPoint]{
@@ -116,12 +121,14 @@ class Polygon: Shape {
         case "square":
             numberOfVertices = 4
             offset -= CGFloat(M_PI_4)
-        case "trapezoid":
+        case "rectangle":
             numberOfVertices = 4
+            offset -= CGFloat(M_PI_4)
         case "pentagon":
             numberOfVertices = 5
         case "haxgon": //typo of hexagon
             numberOfVertices = 6
+            offset -= CGFloat(M_PI/6)
         default:
             fatalError("Shape not recognized")
         }
@@ -129,12 +136,23 @@ class Polygon: Shape {
         var newPoints: [CGPoint] = []
         for i in 1...numberOfVertices{
             let angle = 2 * CGFloat(i) * CGFloat(M_PI) / CGFloat(numberOfVertices) + offset
-            let newX = cos(angle) * 1
-            let newY = sin(angle) * 1
+            let newX = cos(angle)
+            let newY = sin(angle)
             let newPoint = CGPointMake(newX, newY)
             newPoints.append(newPoint)
         }
+        
         return newPoints
+    }
+    
+    override func findSideLength(scale: CGFloat) -> CGFloat{
+        if(closed) {
+            let n = CGFloat(points.count)
+            let iAngle = 180*(n-2)/n
+            return scale/2 / cos(iAngle) * (n+6.0)/9
+        } else{
+            return scale
+        }
     }
     
     override func rotate(radians angle: CGFloat){

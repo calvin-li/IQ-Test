@@ -14,9 +14,20 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
     private var sample = "curve@   77@ 0@  0@  0@  1@  red@    white@  1.0@    long@   none@   2&NA@   none" //TODO: remove
+    private var sampleProblems: [(question: [String], choices: [String])] = []
+    private var pIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let pLocation = NSBundle.mainBundle().resourcePath! + "/problems.txt"
+        let problemsText = try! NSString(contentsOfFile: pLocation, encoding: NSUTF8StringEncoding)
+        let problems = problemsText.componentsSeparatedByString("$")
+        for problem in problems{
+            sampleProblems = sampleProblems + [(
+                question: problem.componentsSeparatedByString("~")[0].componentsSeparatedByString("!"),
+                choices: problem.componentsSeparatedByString("~")[1].componentsSeparatedByString("!"))]
+        }
         
         //clear temp directory
         let temp = NSTemporaryDirectory()
@@ -55,59 +66,46 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         self.view.addSubview(choicesView)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
-    }
-
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if(collectionView == questionView) {
-            return GlobalConstants.patternSize
-        } else if(collectionView == choicesView) {
-            return GlobalConstants.numberOfChoices
-        } else {
-            return 0
-        }
-    }
-    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell: Cell
         var cvCell: UICollectionViewCell
+        let item = indexPath.item
+        var shapes = ""
         
         if(collectionView == questionView){
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(questionReuseIdentifier, forIndexPath: indexPath))
             cell.size = getQuestionCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.yellowColor()
-            cell.addShape(sample)
-            cell.renderShape()
+            if(item < GlobalConstants.patternSize-1){
+                shapes = sampleProblems[pIndex].question[item]
+            }
+            else{
+                return cvCell
+            }
             
         } else if(collectionView == choicesView) {
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath))
             cell.size = getChoiceCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.whiteColor()
-            cell.addShape(sample)
-            cell.renderShape()
+            shapes = sampleProblems[pIndex].choices[item]
             
             //add button
             let button = UIButton(type: .System)
             button.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: getChoiceCellSize())
             button.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
             button.addTarget(self, action: "highlight:", forControlEvents: .TouchDown)
-            button.accessibilityIdentifier = String(indexPath.item)
+            button.accessibilityIdentifier = String(item)
             
             cvCell.contentView.addSubview(button)
             
         } else {
             return UICollectionViewCell()
         }
-    
+        cell.addShape(shapes)
+        cell.renderShape()
+        
         return cvCell
     }
     
@@ -125,6 +123,26 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
     func unhighlight(sender: UIButton!){
         //keep old color, but make it transparent
         sender.backgroundColor = sender.backgroundColor?.colorWithAlphaComponent(0.0)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if(collectionView == questionView) {
+            return GlobalConstants.patternSize
+        } else if(collectionView == choicesView) {
+            return GlobalConstants.numberOfChoices
+        } else {
+            return 0
+        }
     }
 }
 
