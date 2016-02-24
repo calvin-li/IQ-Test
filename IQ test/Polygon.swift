@@ -36,11 +36,9 @@ class Polygon: Shape {
         let layer = getCurrentLayer()
         
         let mPath = CGPathCreateMutable()
+        CGPathAddLines(mPath, nil, points, points.count)
         if(closed){
-            CGPathAddLines(mPath, nil, points + [points[0], points[1]], points.count+2)
-            //add the last two points to close out the shape and make it look smooth
-        } else {
-            CGPathAddLines(mPath, nil, points, points.count)
+            CGPathCloseSubpath(mPath)
         }
         
         layer.path = mPath
@@ -109,7 +107,7 @@ class Polygon: Shape {
     
     func generateRegularNgon(shape: String) -> [CGPoint]{
         var numberOfVertices = 0
-        var offset = CGFloat(M_PI_2)
+        var offset = -CGFloat(M_PI_2)
         closed = true
         
         switch shape{
@@ -137,11 +135,12 @@ class Polygon: Shape {
         var sideScale:CGFloat = 1
         //sideScale should make sidelength 1
         if(numberOfVertices >= 3){
-            let iAngle = 180*(numberOfVertices-2)/numberOfVertices
-            sideScale = 0.5/cos(CGFloat(iAngle))
+            let iAngle = M_PI*(Double(numberOfVertices-2))/Double(numberOfVertices)
+            sideScale = 0.5/cos(CGFloat(iAngle)/2)
         }
+        size = sideScale
         
-        for i in 1...numberOfVertices{
+        for i in 0..<numberOfVertices{
             let angle = 2 * CGFloat(i) * CGFloat(M_PI) / CGFloat(numberOfVertices) + offset
             let newX = cos(angle) * sideScale
             let newY = sin(angle) * sideScale

@@ -12,10 +12,8 @@ import SVGKit
 class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
-    private var questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
-    private var sample = "curve@   77@ 0@  0@  0@  1@  red@    white@  1.0@    long@   none@   2&NA@   none" //TODO: remove
     private var sampleProblems: [(question: [String], choices: [String])] = []
-    private var pIndex = 0
+    private var pIndex = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +53,14 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         questionView.dataSource = self
         questionView.delegate = self
         questionView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.0)
-        questionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: questionReuseIdentifier)
+        questionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: GlobalConstants.questionReuseIdentifier)
         self.view.addSubview(questionView)
         
         choicesView = UICollectionView(frame: self.view.frame, collectionViewLayout: choiceLayout)
         choicesView.dataSource = self
         choicesView.delegate = self
         choicesView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.0)
-        choicesView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: choiceReuseIdentifier)
+        choicesView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: GlobalConstants.choiceReuseIdentifier)
         self.view.addSubview(choicesView)
     }
 
@@ -70,26 +68,26 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         var cell: Cell
         var cvCell: UICollectionViewCell
         let item = indexPath.item
-        var shapes = ""
+        var shapes: [String] = []
         
         if(collectionView == questionView){
-            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(questionReuseIdentifier, forIndexPath: indexPath))
+            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(GlobalConstants.questionReuseIdentifier, forIndexPath: indexPath))
             cell.size = getQuestionCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.yellowColor()
             if(item < GlobalConstants.patternSize-1){
-                shapes = sampleProblems[pIndex].question[item]
+                shapes = sampleProblems[pIndex].question[item].componentsSeparatedByString("#")
             }
             else{
                 return cvCell
             }
             
         } else if(collectionView == choicesView) {
-            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(choiceReuseIdentifier, forIndexPath: indexPath))
+            cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(GlobalConstants.choiceReuseIdentifier, forIndexPath: indexPath))
             cell.size = getChoiceCellSize()
             cvCell = cell.cvCell
             cvCell.backgroundColor = UIColor.whiteColor()
-            shapes = sampleProblems[pIndex].choices[item]
+            shapes = sampleProblems[pIndex].choices[item].componentsSeparatedByString("#")
             
             //add button
             let button = UIButton(type: .System)
@@ -103,7 +101,9 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         } else {
             return UICollectionViewCell()
         }
-        cell.addShape(shapes)
+        for shape in shapes{
+            cell.addShape(shape)
+        }
         cell.renderShape()
         
         return cvCell

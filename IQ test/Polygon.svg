@@ -4,8 +4,9 @@
 		<polygon 
 			points="0,0 0,50 50,50 50,0"
 			stroke="blue"
-			stroke-width="4"
+			stroke-width="2"
 			stroke-opacity="1.0"
+			stroke-dasharray="1"
 			fill="green"
 			fill-opacity="0.99"
 			id="baseShape"

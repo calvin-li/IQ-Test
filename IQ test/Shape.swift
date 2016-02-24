@@ -37,6 +37,19 @@ class Shape: NSObject {
             svg.setAttributeNS(Shape.namespace, qualifiedName: "fill-opacity", value: String(opacity))
         }
     }
+    var dashArray = "" {
+        didSet {
+            switch dashArray{
+            case "short":
+                dashArray = "4, 2"
+            case "mid":
+                dashArray = "5, 5"
+            default:
+                dashArray = "1"
+            }
+            svg.setAttributeNS(Shape.namespace, qualifiedName: "stroke-dasharray", value: dashArray)
+        }
+    }
 
     init(baseShape: String){
         Shape.count += 1
@@ -92,17 +105,31 @@ class Shape: NSObject {
         layer.path = newPath
     }
     
-    func shade(angle: CGFloat) -> [Shape] {
-        let numLines = 10
+    func shade(angle: CGFloat, density: String) -> [Shape] {
+        let numLines: Int
         let startX = center.x - size
         var ans: [Shape] = []
+        
+        switch density{
+        case "sparse":
+            numLines = 6
+        case "normal":
+            numLines = 8
+        case "dense":
+            numLines = 12
+        default:
+            fatalError("Density not recognized")
+        }
+        
+        let crossSize = Int(size)*2
+        
         for i in 0..<numLines{
             let newLine = Polygon()
-            let nextX = startX + CGFloat(i)/10 * size*2
+            let nextX = startX + CGFloat(crossSize*i/numLines) //trying to avoid fp division
             
             newLine.strokeColor = "grey"
             newLine.opacity = 0.5
-            newLine.strokeWidth = strokeWidth/2
+            newLine.strokeWidth = strokeWidth/4
             newLine.generateShape("line")
             newLine.translate(nextX, tY: center.y)
             newLine.scale(size)
@@ -120,7 +147,7 @@ class Shape: NSObject {
         return ans
     }
     
-    func intersect(line: Polygon) -> [CGPoint]{ return [] }    
+    func intersect(line: Polygon) -> [CGPoint]{ return [] }
 }
 
 

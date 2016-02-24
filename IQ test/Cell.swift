@@ -30,11 +30,17 @@ class Cell: NSObject {
         let strokeColor = parameters[6]
         let fillColor = parameters[7]
         let opacity = parameters[8]
+        let dashArray = parameters[9]
+        let shadeDirection = parameters[10]
         var layers = parameters[11].componentsSeparatedByString("&")
+        let shadeDensity = parameters[13]
         
         layers[0] = shape
         scale = scale * CGFloat(size.height) / 100 / 2
         //change scale based on cell height/2
+        if(cvCell.reuseIdentifier == GlobalConstants.choiceReuseIdentifier){
+            scale *= 1.25
+        }
         let center = CGPointMake(size.width/2, size.height/2)
         
         for _ in 1...Int(number)!{
@@ -55,6 +61,7 @@ class Cell: NSObject {
                     newShape.strokeColor = strokeColor
                     newShape.fillColor = fillColor
                     newShape.opacity = 1 - Double(opacity)!
+                    newShape.dashArray = dashArray
                     newShape.generateShape(layer)
                     
                     //make sure to set stroke, fillColor, etc BEFORE points
@@ -62,9 +69,19 @@ class Cell: NSObject {
                     newShape.translate(center)
                     newShape.translate(positionX, tY: positionY)
                     newShape.rotate(degrees: orientation)
-                    newShape = adjust(newShape)
+                    //newShape = adjust(newShape)
 
-                    shapes += newShape.shade(45)
+                    switch shadeDirection{
+                    case "ver":
+                        shapes += newShape.shade(0, density: shadeDensity)
+                    case "pos":
+                        shapes += newShape.shade(45, density: shadeDensity)
+                    case "hor":
+                        shapes += newShape.shade(90, density: shadeDensity)
+                    case "neg":
+                        shapes += newShape.shade(135, density: shadeDensity)
+                    default: break
+                    }
                     
                     shapes.append(newShape)
 

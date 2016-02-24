@@ -16,6 +16,7 @@ struct GlobalConstants {
     static let numShortSide = ceil(sqrt( CGFloat(GlobalConstants.numberOfChoices)/2 ))
     static let collectionViewMargins = UIEdgeInsets(top: 40, left: 10, bottom: 10, right: 10)
     static let questionMargins = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+    static let questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
 }
 
 func getScreenSize() -> CGSize {

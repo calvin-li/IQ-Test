@@ -15,12 +15,13 @@ class Circle: Shape {
     }
     
     override func generateShape(shape: String) {
-        translate(-2.9, tY: -2.8) //make anchor point at origin
+        translate(-1.875, tY: -1.825) //make anchor point at origin
         center = CGPointZero
+        scale(CGFloat(1.0/M_PI)) //make circumference 1
     }
     
-    override func shade(angle: CGFloat) -> [Shape] {
-        let lines = super.shade(0)
+    override func shade(angle: CGFloat, density: String) -> [Shape] {
+        let lines = super.shade(0, density: density)
         for line in lines{
             line.center = center
             line.rotate(degrees: angle)
@@ -47,19 +48,20 @@ class Ellipse: Circle {
     
     override func generateShape(shape: String) {
         super.generateShape(shape)
-        scale(1, yFactor: 0.5)//ellpises are squashed circles
+        scale(1, yFactor: 0.667)//ellpises are squashed circles
+        scale(CGFloat(M_PI))
     }
     
-    override func shade(angle: CGFloat) -> [Shape] {
+    override func shade(angle: CGFloat, density: String) -> [Shape] {
         shadeAngle = Double(angle) * M_PI / 180
-        let lines = super.shade(angle)
+        let lines = super.shade(angle, density: density)
         return lines
     }
     
     override func intersect(verticalLine: Polygon) -> [CGPoint] {
         var iPoints: [CGPoint] = []
         let x = Double(verticalLine.points[0].x - center.x)
-        let rx = sq(Double(size)), ry = rx/4
+        let rx = sq(Double(size)), ry = rx*4/9
         let sinA = sin(shadeAngle), cosA = cos(shadeAngle)
         let a = ry * sq(sinA) + rx * sq(cosA)
         let b = 2 * x * cosA * sinA * (rx - ry)
