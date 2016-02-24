@@ -58,7 +58,6 @@ class Cell: NSObject {
                     newShape.generateShape(layer)
                     
                     //make sure to set stroke, fillColor, etc BEFORE points
-                    scale = newShape.findSideLength(scale)
                     newShape.scale(scale)
                     newShape.translate(center)
                     newShape.translate(positionX, tY: positionY)

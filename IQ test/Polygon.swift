@@ -75,15 +75,15 @@ class Polygon: Shape {
             ]
         case "wave":
             newPoints = [
-                CGPointMake(-8, -1),
-                CGPointMake(-6, 1),
-                CGPointMake(-4, -1),
-                CGPointMake(-2, 1),
-                CGPointMake(0, -1),
-                CGPointMake(2, 1),
-                CGPointMake(4, -1),
-                CGPointMake(6, 1),
-                CGPointMake(8, -1),
+                CGPointMake(-8, 1),
+                CGPointMake(-6, -1),
+                CGPointMake(-4, 1),
+                CGPointMake(-2, -1),
+                CGPointMake(0, 1),
+                CGPointMake(2, -1),
+                CGPointMake(4, 1),
+                CGPointMake(6, -1),
+                CGPointMake(8, 1),
             ]
         case "arrow":
             newPoints = [
@@ -134,25 +134,22 @@ class Polygon: Shape {
         }
         
         var newPoints: [CGPoint] = []
+        var sideScale:CGFloat = 1
+        //sideScale should make sidelength 1
+        if(numberOfVertices >= 3){
+            let iAngle = 180*(numberOfVertices-2)/numberOfVertices
+            sideScale = 0.5/cos(CGFloat(iAngle))
+        }
+        
         for i in 1...numberOfVertices{
             let angle = 2 * CGFloat(i) * CGFloat(M_PI) / CGFloat(numberOfVertices) + offset
-            let newX = cos(angle)
-            let newY = sin(angle)
+            let newX = cos(angle) * sideScale
+            let newY = sin(angle) * sideScale
             let newPoint = CGPointMake(newX, newY)
             newPoints.append(newPoint)
         }
         
         return newPoints
-    }
-    
-    override func findSideLength(scale: CGFloat) -> CGFloat{
-        if(closed) {
-            let n = CGFloat(points.count)
-            let iAngle = 180*(n-2)/n
-            return scale/2 / cos(iAngle) * (n+6.0)/9
-        } else{
-            return scale
-        }
     }
     
     override func rotate(radians angle: CGFloat){

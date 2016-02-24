@@ -120,11 +120,7 @@ class Shape: NSObject {
         return ans
     }
     
-    func intersect(line: Polygon) -> [CGPoint]{ return [] }
-    
-    func findSideLength(scale: CGFloat) -> CGFloat{
-        return scale
-    }
+    func intersect(line: Polygon) -> [CGPoint]{ return [] }    
 }
 
 
