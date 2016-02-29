@@ -44,12 +44,13 @@ class Circle: Shape {
 }
 
 class Ellipse: Circle {
-    var shadeAngle:Double = 0
+    var shadeAngle: Double = 0
+    static let squish: CGFloat = CGFloat(2)/3
     
     override func generateShape(shape: String) {
         super.generateShape(shape)
-        scale(1, yFactor: 0.667)//ellpises are squashed circles
-        scale(CGFloat(M_PI))
+        scale(1, yFactor: Ellipse.squish)//ellpises are squashed circles
+        scale(CGFloat(4))
     }
     
     override func shade(angle: CGFloat, density: String) -> [Shape] {
@@ -61,7 +62,7 @@ class Ellipse: Circle {
     override func intersect(verticalLine: Polygon) -> [CGPoint] {
         var iPoints: [CGPoint] = []
         let x = Double(verticalLine.points[0].x - center.x)
-        let rx = sq(Double(size)), ry = rx*4/9
+        let rx = sq(Double(size)), ry = rx * sqf(Ellipse.squish)
         let sinA = sin(shadeAngle), cosA = cos(shadeAngle)
         let a = ry * sq(sinA) + rx * sq(cosA)
         let b = 2 * x * cosA * sinA * (rx - ry)
@@ -75,6 +76,10 @@ class Ellipse: Circle {
         }
         
         return iPoints
+    }
+    
+    func sqf(x: CGFloat) -> Double{
+        return sq(Double(x))
     }
     
     func sq(x: Double) -> Double{

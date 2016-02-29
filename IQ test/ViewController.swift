@@ -13,7 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     private var questionView: UICollectionView!, choicesView: UICollectionView!
     private var sampleProblems: [(question: [String], choices: [String])] = []
-    private var pIndex = 1
+    private var pIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,20 +73,18 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         if(collectionView == questionView){
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(GlobalConstants.questionReuseIdentifier, forIndexPath: indexPath))
             cell.size = getQuestionCellSize()
-            cvCell = cell.cvCell
-            cvCell.backgroundColor = UIColor.yellowColor()
+            cell.cvCell.backgroundColor = UIColor.yellowColor()
             if(item < GlobalConstants.patternSize-1){
                 shapes = sampleProblems[pIndex].question[item].componentsSeparatedByString("#")
             }
             else{
-                return cvCell
+                return cell.cvCell
             }
             
         } else if(collectionView == choicesView) {
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(GlobalConstants.choiceReuseIdentifier, forIndexPath: indexPath))
             cell.size = getChoiceCellSize()
-            cvCell = cell.cvCell
-            cvCell.backgroundColor = UIColor.whiteColor()
+            cell.cvCell.backgroundColor = UIColor.whiteColor()
             shapes = sampleProblems[pIndex].choices[item].componentsSeparatedByString("#")
             
             //add button
@@ -96,23 +94,26 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
             button.addTarget(self, action: "highlight:", forControlEvents: .TouchDown)
             button.accessibilityIdentifier = String(item)
             
-            cvCell.contentView.addSubview(button)
+            cell.cvCell.contentView.addSubview(button)
             
         } else {
             return UICollectionViewCell()
         }
+        
         for shape in shapes{
             cell.addShape(shape)
         }
         cell.renderShape()
         
-        return cvCell
+        return cell.cvCell
     }
     
     func pressed(sender: UIButton!){
         unhighlight(sender)
         if sender.accessibilityIdentifier == "0"{
-            print(sender.accessibilityIdentifier)
+            pIndex++
+            questionView.reloadData()
+            choicesView.reloadData()
         }
     }
     

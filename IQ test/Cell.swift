@@ -15,6 +15,8 @@ class Cell: NSObject {
     
     init(cvCell: UICollectionViewCell){
         self.cvCell = cvCell
+        super.init()
+        removeShapes()
     }
     
     func addShape(parameterString: String){
@@ -105,14 +107,40 @@ class Cell: NSObject {
         return newShape
     }
     
+    func shadeShape(angle: Double) -> [Shape]{
+        return []
+    }
+    
     func renderShape(){
         for shape in shapes{
             let shapeImageView = SVGKLayeredImageView(SVGKImage: shape.image)
+            shapeImageView.userInteractionEnabled = false
             cvCell.contentView.addSubview(shapeImageView)
         }
     }
     
-    func shadeShape(angle: Double) -> [Shape]{
-        return []
+    func removeShapes(){
+        shapes = []
+        for subview in cvCell.contentView.subviews{
+            subview.removeFromSuperview()
+        }
     }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
