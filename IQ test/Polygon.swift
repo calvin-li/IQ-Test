@@ -92,6 +92,19 @@ class Polygon: Shape {
                 CGPointMake(3, 1),
                 CGPointMake(3, 0),
             ]
+        case "darrow":
+            newPoints = [
+                CGPointMake(-3, 0),
+                CGPointMake(-3, 1),
+                CGPointMake(-8, 0),
+                CGPointMake(-3, -1),
+                CGPointMake(-3, 0),
+                CGPointMake(3, 0),
+                CGPointMake(3, -1),
+                CGPointMake(8, 0),
+                CGPointMake(3, 1),
+                CGPointMake(3, 0),
+            ]
         default:
             newPoints = generateRegularNgon(shape)
             waveScale = 1.0
@@ -150,28 +163,14 @@ class Polygon: Shape {
         
         return newPoints
     }
-    
-    override func rotate(radians angle: CGFloat){
-        //move centroid to origin, rotate, move back
-        var matrix = CGAffineTransformMakeTranslation(-center.x, -center.y)
-        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeRotation(angle))
-        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(center.x, center.y))
-        
-        applyTransform(matrix)
-    }
-    
+
     override func applyTransform(matrix: CGAffineTransform) {
         for i in 0..<points.count {
             points[i] = CGPointApplyAffineTransform(points[i], matrix)
         }
         super.applyTransform(matrix)
     }
-    
-    override func rotate(degrees angle: CGFloat){
-        let pi = CGFloat(M_PI)
-        rotate(radians: angle * pi / 180)
-    }
-    
+
     override func intersect(line: Polygon) -> [CGPoint]{
         var iPoints: [CGPoint] = []
         

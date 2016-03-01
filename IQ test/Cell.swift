@@ -23,9 +23,9 @@ class Cell: NSObject {
         let noWSParameters = parameterString.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let parameters = noWSParameters.joinWithSeparator("").componentsSeparatedByString("@")
         
-        let shape = parameters[0]
+        var shape = parameters[0]
         var scale = CGFloat(Double(parameters[1])!)
-        let orientation = CGFloat(Double(parameters[2])!)
+        var orientation = CGFloat(Double(parameters[2])!)
         let positionX = CGFloat(Double(parameters[3])!)
         let positionY = CGFloat(Double(parameters[4])!)
         let number = parameters[5]
@@ -37,6 +37,10 @@ class Cell: NSObject {
         var layers = parameters[11].componentsSeparatedByString("&")
         let shadeDensity = parameters[13]
         
+        if(shape.hasPrefix("l") && shape != "line"){
+            shape.removeAtIndex(shape.startIndex)
+        }
+        
         layers[0] = shape
         scale = scale * CGFloat(size.height) / 100 / 2
         //change scale based on cell height/2
@@ -44,6 +48,10 @@ class Cell: NSObject {
             scale *= 1.25
         }
         let center = CGPointMake(size.width/2, size.height/2)
+        
+        if(shape == "line"){
+            orientation += 90
+        }
         
         for _ in 1...Int(number)!{
             for layer in layers{
@@ -68,9 +76,9 @@ class Cell: NSObject {
                     
                     //make sure to set stroke, fillColor, etc BEFORE points
                     newShape.scale(scale)
+                    newShape.rotate(degrees: orientation)
                     newShape.translate(center)
                     newShape.translate(positionX, tY: positionY)
-                    newShape.rotate(degrees: orientation)
                     //newShape = adjust(newShape)
 
                     switch shadeDirection{

@@ -94,9 +94,19 @@ class Shape: NSObject {
         size *= max(xFactor, yFactor)
     }
     
-    internal func rotate(radians angle: CGFloat){}
+    internal func rotate(radians angle: CGFloat){
+        //move centroid to origin, rotate, move back
+        var matrix = CGAffineTransformMakeTranslation(-center.x, -center.y)
+        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeRotation(angle))
+        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(center.x, center.y))
+        
+        applyTransform(matrix)
+    }
     
-    internal func rotate(degrees angle: CGFloat){}
+    internal func rotate(degrees angle: CGFloat){
+        let pi = CGFloat(M_PI)
+        rotate(radians: angle * pi / 180)
+    }
     
     func applyTransform(var matrix: CGAffineTransform){
         center = CGPointApplyAffineTransform(center, matrix)
