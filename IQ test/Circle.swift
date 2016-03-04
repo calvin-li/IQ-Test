@@ -17,7 +17,6 @@ class Circle: Shape {
     override func generateShape(shape: String) {
         translate(-1.875, tY: -1.825) //make anchor point at origin
         center = CGPointZero
-        scale(CGFloat(1.0/M_PI)) //make circumference 1
     }
     
     override func shade(angle: CGFloat, density: String) -> [Shape] {
@@ -45,11 +44,15 @@ class Circle: Shape {
 
 class Ellipse: Circle {
     var shadeAngle: Double = 0
-    static let squish: CGFloat = CGFloat(2)/3
+    var rX : CGFloat = 1
+    var rY: CGFloat = 0.667
     
     override func generateShape(shape: String) {
         super.generateShape(shape)
-        scale(1, yFactor: Ellipse.squish)//ellpises are squashed circles
+        if(shape == "revellipse"){
+            swap(&rX, &rY)
+        }
+        scale(rX, yFactor: rY)//ellpises are squashed circles
         scale(CGFloat(4))
     }
     
@@ -62,7 +65,7 @@ class Ellipse: Circle {
     override func intersect(verticalLine: Polygon) -> [CGPoint] {
         var iPoints: [CGPoint] = []
         let x = Double(verticalLine.points[0].x - center.x)
-        let rx = sq(Double(size)), ry = rx * sqf(Ellipse.squish)
+        let rx = sq(Double(size * self.rX)), ry = sq(Double(size * self.rY))
         let sinA = sin(shadeAngle), cosA = cos(shadeAngle)
         let a = ry * sq(sinA) + rx * sq(cosA)
         let b = 2 * x * cosA * sinA * (rx - ry)
@@ -103,9 +106,11 @@ class Curve: Shape {
     }
     
     override func generateShape(shape: String) {
+        opacity = 0
         translate(-10, tY: -7)
         center = CGPointZero //adjust anchor to origin
-        scale(1.0/10)
+        scale(0.1)
+        scale(0.6)
     }
 }
 

@@ -46,7 +46,7 @@ class Polygon: Shape {
     
     override func generateShape(shape: String) {
         var newPoints: [CGPoint] = []
-        var waveScale = CGFloat(4.0/5)
+        var waveScale = CGFloat(0.5)
         
         switch shape{
         case "trapzoid": //typo of trapezoid
@@ -105,17 +105,47 @@ class Polygon: Shape {
                 CGPointMake(3, 1),
                 CGPointMake(3, 0),
             ]
+        case "strcros":
+            fallthrough
+        case "rotcros":
+         newPoints = [
+            CGPointMake(-1, 0),
+            CGPointMake(1, 0),
+            CGPointMake(0, 0),
+            CGPointMake(0, -1),
+            CGPointMake(0, 1),
+            ]
         default:
             newPoints = generateRegularNgon(shape)
             waveScale = 1.0
         }
         
+        if(!closed){ opacity = 0 }
         points = newPoints
-        reDraw()
         scale(waveScale)
-        if(shape == "rectangle"){
+        switch(shape){
+        case "hightriangle":
+            scale(1, yFactor: 1.5)
+        case "fattriangle":
+            scale(1.5, yFactor: 1)
+        case "rectangle":
             scale(1, yFactor: 0.667)
+        case "rerectangle":
+            scale(0.667, yFactor: 1)
+        case "rotcros":
+            rotate(degrees: 45)
+        case "star":
+            for i in 0..<points.count{
+                if (i%2 == 0){
+                    points[i] = points[i] * 0.5
+                } else{
+                    points[i] = points[i] * 0.25
+                }
+            }
+        default:
+            break
         }
+        reDraw()
     }
     
     func generateRegularNgon(shape: String) -> [CGPoint]{
@@ -124,17 +154,26 @@ class Polygon: Shape {
         closed = true
         
         switch shape{
+        case "nothing":
+            numberOfVertices = 0
         case "line":
             numberOfVertices = 2
             closed = false
+        case "hightriangle":
+            fallthrough
+        case "fattriangle":
+            fallthrough
         case "triangle":
             numberOfVertices = 3
+        case "rectangle":
+            fallthrough
+        case "rerectangle":
+            fallthrough
         case "square":
             numberOfVertices = 4
             offset -= CGFloat(M_PI_4)
-        case "rectangle":
-            numberOfVertices = 4
-            offset -= CGFloat(M_PI_4)
+        case "star":
+            numberOfVertices = 10
         case "pentagon":
             numberOfVertices = 5
         case "haxgon": //typo of hexagon
@@ -143,6 +182,10 @@ class Polygon: Shape {
         default:
             fatalError("Shape not recognized")
         }
+        //TODO: Check answers
+        // count tries
+        // time user
+        // reveal answer button
         
         var newPoints: [CGPoint] = []
         var sideScale:CGFloat = 1

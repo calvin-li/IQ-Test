@@ -43,7 +43,7 @@ class Shape: NSObject {
             case "short":
                 dashArray = "4, 2"
             case "mid":
-                dashArray = "5, 5"
+                dashArray = "2, 2"
             default:
                 dashArray = "1"
             }
@@ -94,16 +94,24 @@ class Shape: NSObject {
         size *= max(xFactor, yFactor)
     }
     
-    internal func rotate(radians angle: CGFloat){
-        //move centroid to origin, rotate, move back
-        var matrix = CGAffineTransformMakeTranslation(-center.x, -center.y)
+    func rotate(anchor anchor: CGPoint, radians angle: CGFloat){
+        //move centroid to anchor, rotate, move back
+        var matrix = CGAffineTransformMakeTranslation(-anchor.x, -anchor.y)
         matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeRotation(angle))
-        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(center.x, center.y))
+        matrix = CGAffineTransformConcat(matrix, CGAffineTransformMakeTranslation(anchor.x, anchor.y))
         
         applyTransform(matrix)
     }
     
-    internal func rotate(degrees angle: CGFloat){
+    func rotate(anchor anchor: CGPoint, degrees angle: CGFloat){
+        rotate(anchor: anchor, radians: angle * CGFloat(M_PI) / 180)
+    }
+    
+    func rotate(radians angle: CGFloat){
+        rotate(anchor: center, radians: angle)
+    }
+    
+    func rotate(degrees angle: CGFloat){
         let pi = CGFloat(M_PI)
         rotate(radians: angle * pi / 180)
     }
@@ -143,8 +151,7 @@ class Shape: NSObject {
             newLine.generateShape("line")
             newLine.translate(nextX, tY: center.y)
             newLine.scale(size)
-            newLine.center = center
-            newLine.rotate(degrees: angle)
+            newLine.rotate(anchor: center, degrees: angle)
             
             let iPoints = intersect(newLine)
 
@@ -156,7 +163,7 @@ class Shape: NSObject {
         }
         return ans
     }
-    
+
     func intersect(line: Polygon) -> [CGPoint]{ return [] }
 }
 

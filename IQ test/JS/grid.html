@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+<script type="text/javascript" src="./global.js" ></script>
+<script type="text/javascript" src="./orientation.js" ></script>
+<script type="text/javascript" src="./position.js" ></script>
+<script type="text/javascript" src="./intersection.js" ></script>
+<script type="text/javascript" src="./shade.js" ></script>
+<script type="text/javascript" src="./layer.js" ></script>
+<script type="text/javascript" src="./location.js" ></script>
+<script type="text/javascript" src="./color.js" ></script>
+<script type="text/javascript" src="./fill.js" ></script>
+<script type="text/javascript" src="./border.js" ></script>
+<script type="text/javascript" src="./shapeWithScale.js" ></script>
+<script type="text/javascript" src="./number.js" ></script>
+<script type="text/javascript" src="./rendering.js" ></script>
+
+<script type="text/javascript">
+    
+    var mins = 10;  //Set the number of minutes you need
+    var secs = mins * 60;
+    var currentSeconds = 0;
+    var currentMinutes = 0;
+    setTimeout('Decrement()',1000);
+    
+    function Decrement() {
+        currentMinutes = Math.floor(secs / 60);
+        currentSeconds = secs % 60;
+        if(currentSeconds <= 9) currentSeconds = "0" + currentSeconds;
+        secs--;
+        document.getElementById("timerText").innerHTML = currentMinutes + ":" + currentSeconds; //Set the element id you need the time put into.
+        if(secs !== -1) setTimeout('Decrement()',1000);
+        else alert("you are ready");
+    }
+
+
+// line: 135
+// curve: 135
+// sql: 17
+// wave: 18
+// arrow: 18
+
+// horizontal partition: -100, -5, 100
+// vertical partition: -90, 15, 95
+// horizontal partition: -60, 60
+// vertical partition: -60, 60
+
+// ltriangle: 10, 12, 15, 18
+// lcircle: 10, 12, 15, 18
+// lsquare: 10, 12, 15, 18
+// lpentagon: 6, 7, 9, 11
+// lhaxgon: 6, 6.5, 7.5, 9.5
+
+
+// circle: 100, 120, 140, 160
+// square: 90, 105, 120, 140
+// star: 55, 65, 80, 90
+// ellipse: 30, 37, 43, 48
+// triangle: 95, 110, 135, 160
+// trapzoid: 60, 70, 80, 90
+// rectangle: 60, 72, 78, 85
+// pentagon: 55, 65, 77, 90
+// haxgon: 53 ,63, 75 ,84
+
+//TODO:: find scale for lines and adjust the gap for number function
+
+
+function workFlow()
+{
+    questionModeFlush();
+    
+    var shape = "circle";
+    var scale = 140;
+
+    var arrayOfPoints = pointGenerationForShapeAndScale(shape, scale);
+
+    pointProcessForShapeOrientation(shape,0,arrayOfPoints,0,0);
+    arrayOfPoints = pointProcessForPosition(0,0,arrayOfPoints);
+
+    arrayOfPoints = globalRelocation(4,arrayOfPoints);
+
+    var arrayOfObjects = setUpNumber(arrayOfPoints, shape, 0, scale, 3, arrayOfPositionInfo);
+    var elements = pointsRenderingToElements(shape, scale, arrayOfObjects);
+
+    //SeaGreen
+    //Chartreuse
+    setUpColor(elements, "blue");
+    setUpFill(shape,elements,"rgb(58, 101, 167)",".3");
+    setUpBorder(elements, shape, "short");
+
+    setUpShade(shape, arrayOfObjects, scale, "neg", elements);
+    setUpLayer(shape, arrayOfObjects, scale, elements, "1&pentagon&NA");
+    setupLocation(shape, arrayOfObjects, scale, "outside", 0, elements, false);
+
+    addElementIntoCanvasWithAllAttributesOn(elements);
+    
+    
+    var shape = "ltriangle";
+    var scale = 25;
+    
+    var arrayOfPoints = pointGenerationForShapeAndScale(shape, scale);
+    
+    pointProcessForShapeOrientation(shape,90,arrayOfPoints,0,0);
+    arrayOfPoints = pointProcessForPosition(0,-70,arrayOfPoints);
+    
+    arrayOfPoints = globalRelocation(1,arrayOfPoints);
+    
+    var arrayOfObjects = setUpNumber(arrayOfPoints, shape, 0, scale, 4, arrayOfPositionInfo);
+    var elements = pointsRenderingToElements(shape, scale, arrayOfObjects);
+    
+    setUpColor(elements, "blue");
+    setUpFill(shape,elements,"gold",".3");
+    setUpBorder(elements, "none");
+    
+    setUpShade(shape, arrayOfObjects, scale, "neg", elements);
+    setUpLayer(shape, arrayOfObjects, scale, elements, "none");
+    setupLocation(shape, arrayOfObjects, scale, "none", 1, elements, false);
+    
+    addElementIntoCanvasWithAllAttributesOn(elements);
+    
+    
+    
+    
+    var shape = "lsquare";
+    var scale = 25;
+    
+    var arrayOfPoints = pointGenerationForShapeAndScale(shape, scale);
+    
+    pointProcessForShapeOrientation(shape,90,arrayOfPoints,0,0);
+    arrayOfPoints = pointProcessForPosition(0,0,arrayOfPoints);
+    
+    arrayOfPoints = globalRelocation(1,arrayOfPoints);
+    
+    var arrayOfObjects = setUpNumber(arrayOfPoints, shape, 0, scale, 0, arrayOfPositionInfo);
+    var elements = pointsRenderingToElements(shape, scale, arrayOfObjects);
+    
+    setUpColor(elements, "blue");
+    setUpFill(shape,elements,"gold",".3");
+    setUpBorder(elements, "none");
+    
+    setUpShade(shape, arrayOfObjects, scale, "neg", elements);
+    setUpLayer(shape, arrayOfObjects, scale, elements, "none");
+    setupLocation(shape, arrayOfObjects, scale, "none", 1, elements, false);
+    
+    addElementIntoCanvasWithAllAttributesOn(elements);
+}
+
+
+function addElementIntoCanvasWithAllAttributesOn(elements)
+{
+    for(var i = 0;i < elements.length;i++)
+    {
+        document.getElementById('s').appendChild(elements[i]);
+    }
+}
+
+
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Your IQ Problem</title>
+</head>
+
+<body>
+    <span style="position:absolute;left:950px;top:10px;font-size:-webkit-xxx-large;font-style:italic;color:lightcoral">A1</span>
+    <span style="position:absolute;left:24px;top:30px;font-size:-webkit-xxx-large;font-style:italic;color:lightcoral">Q1</span>
+    <span style="position:absolute;left:347px;top:800px;font-size:xx-large;font-weight:bold">Time Left:</span>
+    <span id="timerText" style="position:absolute;left:510px;top:800px;font-weight:bold;font-size:xx-large"></span>
+  
+    
+
+    <svg id="s" onclick="workFlow()" width="1600px" height="1200px"xmlns="http://www.w3.org/2000/svg">
+
+<!--
+        <line x1="150" y1="55" x2="900" y2="55" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="150" y1="280" x2="900" y2="280" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="150" y1="505" x2="900" y2="505" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="150" y1="730" x2="900" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+-->
+
+        <line x1="100" y1="55" x2="850" y2="55" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="100" y1="280" x2="850" y2="280" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="100" y1="505" x2="850" y2="505" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="100" y1="730" x2="850" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+
+<!--
+        <line x1="150" y1="55" x2="150" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="400" y1="55" x2="400" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="650" y1="55" x2="650" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="900" y1="55" x2="900" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+-->
+
+
+        <line x1="100" y1="55" x2="100" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="350" y1="55" x2="350" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="600" y1="55" x2="600" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+        <line x1="850" y1="55" x2="850" y2="730" stroke="rgb(0,255,153)" stroke-width="4" />
+
+<!--
+        <rect x="275" y="180" width="100" height="100" fill="blue" />
+
+        <path d="M235,175 Q275,150 315,175" stroke="blue" stroke-width="5" fill="none"/>
+        <path d="M215,175 Q275,133 335,175" stroke="blue" stroke-width="5" fill="none"/>
+        <path d="M185,175 Q275,108 365,175" stroke="blue" stroke-width="5" fill="none"/>
+        <path d="M155,175 Q275,93 395,175" stroke="blue" stroke-width="5" fill="none"/>
+        
+        
+
+         <polyline points="220,180 235,165 250,180 265,165 280,180 295,165 310,180 325,165 340,180" stroke="blue" stroke-width="5" fill="none" />
+        
+        
+        <polyline points="185,180 207.5,165 230,180 252.5,165 270,180 29,165 310,180 325,165 340,180" stroke="blue" stroke-width="5" fill="none" />
+       -->
+
+        <rect x="1021" y="15" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)" onclick=""></rect>
+        <rect x="1269" y="15" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1021" y="240" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1269" y="240" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1021" y="465" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1269" y="465" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1021" y="690" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        <rect x="1269" y="690" width="248" height="225" style="stroke:aqua;stroke-width:4;fill:white" onmouseover="this.style['stroke-width']=6;this.setAttribute('rx',20);this.setAttribute('ry',20)"" onmouseout="this.style['stroke-width']=4;this.setAttribute('rx',0);this.setAttribute('ry',0);this.setAttribute(null,'stoke-width',4)"></rect>
+        
+        
+        <polygon points="200,800 250,800 250,780 280,810 250,840 250,820 200,820" style="fill:gold;" onmouseover="this.style.fill='red'" onmouseout="this.style.fill='gold'"/>
+        <polygon points="700,800 650,800 650,780 620,810 650,840 650,820 700,820" style="fill:gold;" onmouseover="this.style.fill='red'" onmouseout="this.style.fill='gold'"/>
+        
+        
+    </svg>
+</body>
+</html>

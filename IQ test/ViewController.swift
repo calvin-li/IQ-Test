@@ -66,14 +66,13 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell: Cell
-        var cvCell: UICollectionViewCell
         let item = indexPath.item
         var shapes: [String] = []
         
         if(collectionView == questionView){
             cell = Cell(cvCell: collectionView.dequeueReusableCellWithReuseIdentifier(GlobalConstants.questionReuseIdentifier, forIndexPath: indexPath))
             cell.size = getQuestionCellSize()
-            cell.cvCell.backgroundColor = UIColor.yellowColor()
+            cell.cvCell.backgroundColor = UIColor(colorLiteralRed: 1, green: 1, blue: 0.75, alpha: 1)
             if(item < GlobalConstants.patternSize-1){
                 shapes = sampleProblems[pIndex].question[item].componentsSeparatedByString("#")
             }

@@ -24,63 +24,109 @@ class Cell: NSObject {
         let parameters = noWSParameters.joinWithSeparator("").componentsSeparatedByString("@")
         
         var shape = parameters[0]
-        var scale = CGFloat(Double(parameters[1])!)
+        var scale: CGFloat = 1
+        if let i = Double(parameters[1]){
+            scale = CGFloat(i)
+        } else {
+            switch(shape){
+            case "dot":
+                scale = 2
+            case "revellipse":
+                scale = 18
+            default:
+                scale = 100
+            }
+        }
         var orientation = CGFloat(Double(parameters[2])!)
-        let positionX = CGFloat(Double(parameters[3])!)
-        let positionY = CGFloat(Double(parameters[4])!)
-        let number = parameters[5]
+        var positionX = CGFloat(Double(parameters[3])!)
+        var positionY = CGFloat(Double(parameters[4])!)
+        var number = Int(parameters[5])!
         let strokeColor = parameters[6]
         let fillColor = parameters[7]
-        let opacity = parameters[8]
+        var opacity = parameters[8]
         let dashArray = parameters[9]
-        let shadeDirection = parameters[10]
+        var shadeDirection = parameters[10]
         var layers = parameters[11].componentsSeparatedByString("&")
         let shadeDensity = parameters[13]
         
+        switch(shape){
+        case "line":
+            orientation += 90
+            scale *= 0.5
+        case "ltriangle":
+            orientation += 180
+        case "lhaxgon":
+            orientation += 30
+        case "circle":
+            fallthrough
+        case "lcircle":
+            fallthrough
+        case "ellipse":
+            scale /= CGFloat(M_PI)
+        default:
+            break
+        }
+        
+        //small shapes can't be rotated, large ones can't be multiplied
         if(shape.hasPrefix("l") && shape != "line"){
             shape.removeAtIndex(shape.startIndex)
+            orientation = 0
+            shadeDirection = "none"
+        } else if(!["curve", "wave", "line", "sql", "arrow", "darrow"].contains(shape)){
+            number = 1
+        }
+        
+        if(fillColor == "white"){
+            opacity = "0"
+        }
+        
+        let cellScale = CGFloat(size.height) / 200
+        scale *= cellScale
+        positionX *= cellScale
+        positionY *= cellScale
+        
+        //change scale based on cell height/2
+        if(cvCell.reuseIdentifier == GlobalConstants.choiceReuseIdentifier){
+            //scale *= 1.25
         }
         
         layers[0] = shape
-        scale = scale * CGFloat(size.height) / 100 / 2
-        //change scale based on cell height/2
-        if(cvCell.reuseIdentifier == GlobalConstants.choiceReuseIdentifier){
-            scale *= 1.25
-        }
         let center = CGPointMake(size.width/2, size.height/2)
         
-        if(shape == "line"){
-            orientation += 90
-        }
-        
-        for _ in 1...Int(number)!{
+        for i in 1...number{
             for layer in layers{
                 if (layer != "NA"){
                     var newShape: Shape
                     
-                    if(layer == "circle"){
+                    switch(layer){
+                    case "circle":
                         newShape = Circle()
-                    }else if(layer == "ellipse"){
+                    case "ellipse":
+                        fallthrough
+                    case "revellipse":
                         newShape = Ellipse()
-                    } else if(layer == "curve"){
+                    case "curve":
                         newShape = Curve()
-                    } else{
+                    case "dot":
+                        newShape = Circle()
+                    default:
                         newShape = Polygon()
                     }
                     
                     newShape.strokeColor = strokeColor
                     newShape.fillColor = fillColor
-                    newShape.opacity = 1 - Double(opacity)!
+                    newShape.opacity = Double(opacity)!
                     newShape.dashArray = dashArray
                     newShape.generateShape(layer)
                     
                     //make sure to set stroke, fillColor, etc BEFORE points
+                    newShape.translate(subcenter(i, total: number, shape: shape) * scale)
                     newShape.scale(scale)
-                    newShape.rotate(degrees: orientation)
+                    newShape.rotate(anchor: CGPointZero, degrees: orientation)
                     newShape.translate(center)
-                    newShape.translate(positionX, tY: positionY)
+                    newShape.translate(CGPointMake(positionX, positionY) * 0.8)
                     //newShape = adjust(newShape)
-
+                    
                     switch shadeDirection{
                     case "ver":
                         shapes += newShape.shade(0, density: shadeDensity)
@@ -97,6 +143,22 @@ class Cell: NSObject {
 
                 }
             }
+        }
+    }
+    
+    func subcenter(number: Int, total: Int, shape: String) -> CGPoint {
+        if(["line", "wave", "curve", "sql", "arrow", "darrow"].contains(shape)){
+            var adjustment: CGFloat = 0.15
+            if(["wave", "sql", "arrow", "darrow"].contains(shape)){
+                adjustment *= 8
+            }
+            let newY: CGFloat =  -CGFloat(total-1)/2 + CGFloat(number-1)
+            return CGPointMake(0, newY) * adjustment
+        } else {
+            let adjustment: CGFloat = 2.5
+            let newX = CGFloat((number-1))%2
+            let newY = CGFloat(-CGFloat(total-1)/2/2 + CGFloat((number-1)/2))
+            return CGPointMake(newX, newY) * adjustment
         }
     }
     
