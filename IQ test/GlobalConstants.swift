@@ -13,7 +13,8 @@ import UIKit
 struct GlobalConstants {
     static let patternSize = 9
     static let numberOfChoices = 8
-    static let numShortSide = ceil(sqrt( CGFloat(GlobalConstants.numberOfChoices)/2 ))
+    static let questionsPerSide = ceil(sqrt(CGFloat(GlobalConstants.patternSize)))
+    static let choicesShortSide = ceil(sqrt( CGFloat(GlobalConstants.numberOfChoices)/2 ))
     static let collectionViewMargins = UIEdgeInsets(top: 40, left: 10, bottom: 10, right: 10)
     static let questionMargins = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
     static let questionReuseIdentifier = "Question", choiceReuseIdentifier = "Choice"
@@ -27,10 +28,8 @@ func getScreenSize() -> CGSize {
 }
 
 func getQuestionCellSize() -> CGSize {
-    let numPerSide = ceil(sqrt(CGFloat(GlobalConstants.patternSize)))
-    
     let screenSize = getScreenSize()
-    var width = floor(screenSize.width / numPerSide)
+    var width = floor(screenSize.width / GlobalConstants.questionsPerSide)
     width -= GlobalConstants.questionMargins.left + GlobalConstants.questionMargins.right
     let height = width
     
@@ -39,7 +38,7 @@ func getQuestionCellSize() -> CGSize {
 
 func getChoiceCellSize() -> CGSize {
     let screenSize = getScreenSize()
-    var width = floor(screenSize.width / (CGFloat(GlobalConstants.numberOfChoices) / GlobalConstants.numShortSide) )
+    var width = floor(screenSize.width / (CGFloat(GlobalConstants.numberOfChoices) / GlobalConstants.choicesShortSide) )
     width -= GlobalConstants.questionMargins.left + GlobalConstants.questionMargins.right
     let height = width
     

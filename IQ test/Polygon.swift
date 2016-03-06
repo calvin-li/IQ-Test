@@ -182,10 +182,6 @@ class Polygon: Shape {
         default:
             fatalError("Shape not recognized")
         }
-        //TODO: Check answers
-        // count tries
-        // time user
-        // reveal answer button
         
         var newPoints: [CGPoint] = []
         var sideScale:CGFloat = 1

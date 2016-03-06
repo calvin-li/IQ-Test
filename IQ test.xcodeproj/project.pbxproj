@@ -23,7 +23,6 @@
 		BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC5B6EF01BF29E76001B78F6 /* LaunchScreen.storyboard */; };
 		BC5B6EFD1BF29E76001B78F6 /* IQ_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6EFC1BF29E76001B78F6 /* IQ_testTests.swift */; };
 		BC5B6F081BF29E76001B78F6 /* IQ_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */; };
-		BC8621CD1C3C994100533294 /* Shapes in Resources */ = {isa = PBXBuildFile; fileRef = BC8621CC1C3C994100533294 /* Shapes */; };
 		BC9F2EB11C558379007735E4 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB01C558379007735E4 /* Polygon.swift */; };
 		BC9F2EB31C55B68A007735E4 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9F2EB21C55B68A007735E4 /* Circle.swift */; };
 		BC9F2EB61C55B758007735E4 /* Circle.svg in Resources */ = {isa = PBXBuildFile; fileRef = BC9F2EB41C55B758007735E4 /* Circle.svg */; };
@@ -305,7 +304,6 @@
 				BC5B6EF21BF29E76001B78F6 /* LaunchScreen.storyboard in Resources */,
 				BC5B6EEF1BF29E76001B78F6 /* Assets.xcassets in Resources */,
 				BC2A0AD31C73F8640015189E /* Path.svg in Resources */,
-				BC8621CD1C3C994100533294 /* Shapes in Resources */,
 				BC5B6EEA1BF29E76001B78F6 /* Main.storyboard in Resources */,
 				BC9F2EB71C55B758007735E4 /* Polygon.svg in Resources */,
 				BC2A0AD51C7A74F30015189E /* problems.txt in Resources */,
