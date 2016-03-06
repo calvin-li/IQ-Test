@@ -72,7 +72,6 @@
 		BC5B6F031BF29E76001B78F6 /* IQ testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IQ testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC5B6F071BF29E76001B78F6 /* IQ_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQ_testUITests.swift; sourceTree = "<group>"; };
 		BC5B6F091BF29E76001B78F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC8621CC1C3C994100533294 /* Shapes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shapes; sourceTree = "<group>"; };
 		BC9F2EAF1C51A0BE007735E4 /* JS */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JS; sourceTree = "<group>"; };
 		BC9F2EB01C558379007735E4 /* Polygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		BC9F2EB21C55B68A007735E4 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
@@ -150,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				BC9F2EAF1C51A0BE007735E4 /* JS */,
-				BC8621CC1C3C994100533294 /* Shapes */,
 				BC35D0201C0FB031009029D3 /* SVG */,
 				BC5B6EEE1BF29E76001B78F6 /* Assets.xcassets */,
 				BC2A0AD41C7A74F30015189E /* problems.txt */,
